@@ -4,44 +4,51 @@ const Card = ({ title, titlecomplete, iconsvg, price }) => {
         <div className="scale-100 md:scale-[1.2] lg:scale-[1.4] origin-top-left">
             <div className="relative w-[490px] h-[311px] bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)]">
                 {/* Rectangle 9 lateral */}
-                <div className="absolute right-0 top-0 w-[122px] h-[311px] bg-[#061922] rounded-[0px_34px_34px_0px]"></div>
+                <div className="absolute right-0 top-0 w-[122px] h-[311px] bg-[#061922] rounded-[0px_34px_34px_0px]">
 
-                {/* Percentage boxes */}
-                {/* 1h */}
-                <div className="absolute left-[368px] top-[10px] w-[92px] h-[55px]">
-                    <div className="absolute left-[36px] top-[0px] w-[20px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">1h</div>
-                    <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(241,86,83,0.2)] border border-[#F15653] rounded-[8px]">
-                        <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">-0.39%</div>
+
+                    {/* Percentage boxes */}
+                    {/* 1h */}
+                    <div className="absolute left-[368px] top-[10px] w-[92px] h-[55px]">
+                        <div className="absolute left-[36px] top-[0px] w-[20px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">1h</div>
+                        <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(241,86,83,0.2)] border border-[#F15653] rounded-[8px]">
+                            <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">-0.39%</div>
+                        </div>
+                        <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
                     </div>
-                    <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
+
+                    {/* 6h */}
+                    <div className="absolute left-[368px] top-[75px] w-[92px] h-[55px]">
+                        <div className="absolute left-[32px] top-[0px] w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">6h</div>
+                        <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(241,86,83,0.2)] border border-[#F15653] rounded-[8px]">
+                            <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">-1.49%</div>
+                        </div>
+                        <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
+                    </div>
+
+                    {/* 12h */}
+                    <div className="absolute left-[368px] top-[140px] w-[92px] h-[55px]">
+                        <div className="absolute left-[32px] top-[0px] w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">12h</div>
+                        <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(6,217,98,0.2)] border border-[#06D962] rounded-[8px]">
+                            <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">1.02%</div>
+                        </div>
+                        <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
+                    </div>
+
+                    {/* 24h */}
+                    <div className="absolute left-[368px] top-[205px] w-[92px] h-[55px]">
+                        <div className="absolute left-[32px] top-[0px] w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">24h</div>
+                        <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(6,217,98,0.2)] border border-[#06D962] rounded-[8px]">
+                            <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">2.39%</div>
+                        </div>
+                        <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
+                    </div>
+
+
+
                 </div>
 
-                {/* 6h */}
-                <div className="absolute left-[368px] top-[75px] w-[92px] h-[55px]">
-                    <div className="absolute left-[32px] top-[0px] w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">6h</div>
-                    <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(241,86,83,0.2)] border border-[#F15653] rounded-[8px]">
-                        <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">-1.49%</div>
-                    </div>
-                    <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
-                </div>
 
-                {/* 12h */}
-                <div className="absolute left-[368px] top-[140px] w-[92px] h-[55px]">
-                    <div className="absolute left-[32px] top-[0px] w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">12h</div>
-                    <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(6,217,98,0.2)] border border-[#06D962] rounded-[8px]">
-                        <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">1.02%</div>
-                    </div>
-                    <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
-                </div>
-
-                {/* 24h */}
-                <div className="absolute left-[368px] top-[205px] w-[92px] h-[55px]">
-                    <div className="absolute left-[32px] top-[0px] w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">24h</div>
-                    <div className="absolute left-[0px] top-[28px] w-[92px] h-[27px] bg-[rgba(6,217,98,0.2)] border border-[#06D962] rounded-[8px]">
-                        <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3]">2.39%</div>
-                    </div>
-                    <div className="absolute left-[0px] top-[21px] w-[92px] h-[0px] border-t border-[#6B74A3]"></div>
-                </div>
 
                 {/* BTC */}
                 <div className="absolute left-[20px] top-[161px] w-[129px] h-[62px] text-[#FF7700] font-['Geist_Mono'] font-medium text-[48px] leading-[1.3]">{title}</div>
