@@ -1,6 +1,6 @@
 import './Card.css';
 
-const Card = ({ title, titlecomplete, iconsvg, price, color }) => {
+const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percetage24 }) => {
     return (
         <div className="ml-10">
 
