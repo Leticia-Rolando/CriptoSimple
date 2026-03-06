@@ -1,6 +1,6 @@
 import './Card.css';
 
-const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percetage24 }) => {
+const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percentage24 }) => {
     return (
         <div className="ml-10">
 
@@ -15,7 +15,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                         <div className="relative w-[92px] h-[55px]">
                             <div className="absolute left-[36px] top-0 w-[20px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">1h</div>
                             <div className="absolute left-0 top-[28px] w-[92px] h-[27px] bg-[rgba(241,86,83,0.2)] border border-[#F15653] rounded-[8px]">
-                                <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">-0.39%</div>
+                                <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">{percentage1}</div>
                             </div>
                             <div className="absolute left-0 top-[21px] w-[92px] h-0 border-t border-[#6B74A3]"></div>
                         </div>
@@ -24,7 +24,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                         <div className="relative w-[92px] h-[55px] mt-[15px]">
                             <div className="absolute left-[32px] top-0 w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">6h</div>
                             <div className="absolute left-0 top-[28px] w-[92px] h-[27px] bg-[rgba(241,86,83,0.2)] border border-[#F15653] rounded-[8px]">
-                                <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">-1.49%</div>
+                                <div className="absolute left-[17px] top-[3px] w-[58px] h-[21px] text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">{percentage6}</div>
                             </div>
                             <div className="absolute left-0 top-[21px] w-[92px] h-0 border-t border-[#6B74A3]"></div>
                         </div>
@@ -33,7 +33,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                         <div className="relative w-[92px] h-[55px] mt-[15px]">
                             <div className="absolute left-[32px] top-0 w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">12h</div>
                             <div className="absolute left-0 top-[28px] w-[92px] h-[27px] bg-[rgba(6,217,98,0.2)] border border-[#06D962] rounded-[8px]">
-                                <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">1.02%</div>
+                                <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">{percentage12}</div>
                             </div>
                             <div className="absolute left-0 top-[21px] w-[92px] h-0 border-t border-[#6B74A3]"></div>
                         </div>
@@ -42,7 +42,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                         <div className="relative w-[92px] h-[55px] mt-[15px]">
                             <div className="absolute left-[32px] top-0 w-[29px] h-[21px] text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">24h</div>
                             <div className="absolute left-0 top-[28px] w-[92px] h-[27px] bg-[rgba(6,217,98,0.2)] border border-[#06D962] rounded-[8px]">
-                                <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">2.39%</div>
+                                <div className="absolute left-[22px] top-[3px] w-[48px] h-[21px] text-[#06D962] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">{percentage24}</div>
                             </div>
                             <div className="absolute left-0 top-[21px] w-[92px] h-0 border-t border-[#6B74A3]"></div>
                         </div>
@@ -61,7 +61,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                     {/* Rectangle 8 */}
                     <div className="w-32.75 h-32.75 bg-[#153535] rounded-[34px] shadow-[inset_1px_4px_10px_2px_rgba(6,25,34,1)] flex items-center justify-center">
                         {/* Vector */}
-                        <img src={iconsvg} alt="Bitcoin" className="w-11.5 h-18.25 fill-" />
+                        <img src={iconsvg} alt="Bitcoin" className="w-11.5 h-18.25" />
                     </div>
 
                     <div id="titulos" className="absolute left-27 flex flex-col justify-center leading-[1.2]">
