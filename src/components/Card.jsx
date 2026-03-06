@@ -1,6 +1,6 @@
 import './Card.css';
 
-const Card = ({ title, titlecomplete, iconsvg, price }) => {
+const Card = ({ title, titlecomplete, iconsvg, price, color }) => {
     return (
         <div className="ml-10">
 
@@ -9,7 +9,7 @@ const Card = ({ title, titlecomplete, iconsvg, price }) => {
                 {/* Rectangle 9 lateral */}
                 <div className="absolute right-0 top-0 w-30.5 h-77.75 bg-[#061922] rounded-[0px_34px_34px_0px] flex items-center justify-center">
 
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center mb-2">
                         {/* Percentage boxes */}
                         {/* 1h */}
                         <div className="relative w-[92px] h-[55px]">
@@ -56,17 +56,18 @@ const Card = ({ title, titlecomplete, iconsvg, price }) => {
 
 
 
-                <div className='absolute top-6 left-4 flex items-center'>
+                <div className='absolute top-5 left-5 flex items-center'>
 
                     {/* Rectangle 8 */}
-                    <div className="w-[131px] h-[131px] bg-[#153535] rounded-[34px] shadow-[inset_1px_4px_10px_2px_rgba(6,25,34,1)] flex items-center justify-center">
+                    <div className="w-32.75 h-32.75 bg-[#153535] rounded-[34px] shadow-[inset_1px_4px_10px_2px_rgba(6,25,34,1)] flex items-center justify-center">
                         {/* Vector */}
-                        <img src={iconsvg} alt="Bitcoin" className="w-[46px] h-[73px] fill-" />
+                        <img src={iconsvg} alt="Bitcoin" className="w-11.5 h-18.25 fill-" />
                     </div>
 
                     <div id="titulos" className="absolute left-27 flex flex-col justify-center leading-[1.2]">
                         {/* BTC */}
-                        <div className="relative left-12 text-[#FF7700] font-['Geist_Mono'] font-medium text-[48px]">{title}</div>
+                        <div className="relative left-12 font-['Geist_Mono'] font-medium text-[48px]" style={{ color: color }}
+                        >{title}</div>
 
                         {/* Bitcoin */}
                         <div className="relative left-12 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[20px]">{titlecomplete}</div>
@@ -77,7 +78,7 @@ const Card = ({ title, titlecomplete, iconsvg, price }) => {
 
 
                 {/* Price */}
-                <div className="absolute left-[20px] top-50 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[45px] leading-[1.3]">{price}</div>
+                <div className="absolute left-5 top-50 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[45px] leading-[1.3]">{price}</div>
             </div>
         </div>
     );

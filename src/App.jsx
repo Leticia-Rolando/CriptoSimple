@@ -5,17 +5,14 @@ function App() {
 
   return (
     <>
-    <div className='fundo overflow-x-hidden overflow-y-auto'>
+      <div className='fundo'>
         <div>
           <h1 className="p-3">oiiiii</h1>
         </div>
-        <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} price={"R$357.120,99"}/>
-        <div className='text-8xl'>
-        
-        </div>
+        <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} color={"#FF7700"} price={"R$357.120,99"} />
       </div>
     </>
-    
+
   )
 }
 
