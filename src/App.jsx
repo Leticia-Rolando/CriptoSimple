@@ -1,4 +1,4 @@
-import Texto from './components/texto'
+import Card from './components/card'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
         <div>
           <h1 className="p-3">oiiiii</h1>
         </div>
-        <Texto/>
+        <Card/>
         <div className='text-8xl'>
         
         </div>
