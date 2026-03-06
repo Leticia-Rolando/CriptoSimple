@@ -2,12 +2,12 @@ import './Card.css';
 
 const Card = ({ title, titlecomplete, iconsvg, price }) => {
     return (
-        <div className="scale-100 md:scale-[1.2] lg:scale-[1.4] origin-top-left">
+        <div className="ml-10">
 
-            <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma z-10">
+            <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma">
 
                 {/* Rectangle 9 lateral */}
-                <div className="absolute right-0 top-0 w-30.5 h-77.75 bg-[#061922] rounded-[0px_34px_34px_0px] flex items-center justify-center z-1">
+                <div className="absolute right-0 top-0 w-30.5 h-77.75 bg-[#061922] rounded-[0px_34px_34px_0px] flex items-center justify-center">
 
                     <div className="flex flex-col items-center">
                         {/* Percentage boxes */}
