@@ -2,7 +2,7 @@ import './Card.css';
 
 const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percentage24 }) => {
     return (
-        <div className="ml-10">
+        <div className="scale-70 lg:scale-x-100 lg:scale-y-100">
 
             <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma">
 
@@ -49,12 +49,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
 
                     </div>
 
-
-
                 </div>
-
-
-
 
                 <div className='absolute top-5 left-5 flex items-center'>
 
