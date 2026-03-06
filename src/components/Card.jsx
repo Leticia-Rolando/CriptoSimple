@@ -3,10 +3,11 @@ const Card = ({ title, titlecomplete, iconsvg, price }) => {
     return (
         <div className="scale-100 md:scale-[1.2] lg:scale-[1.4] origin-top-left">
             <div className="relative w-[490px] h-[311px] bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)]">
+
                 {/* Rectangle 9 lateral */}
                 <div className="absolute right-0 top-0 w-[122px] h-[311px] bg-[#061922] rounded-[0px_34px_34px_0px] flex items-center justify-center">
 
-                    <div id="alterar" className="flex flex-col items-center">
+                    <div className="flex flex-col items-center">
                         {/* Percentage boxes */}
                         {/* 1h */}
                         <div className="relative w-[92px] h-[55px]">
@@ -52,15 +53,21 @@ const Card = ({ title, titlecomplete, iconsvg, price }) => {
 
 
 
-                {/* BTC */}
-                <div className="absolute left-[20px] top-[161px] w-[129px] h-[62px] text-[#FF7700] font-['Geist_Mono'] font-medium text-[48px] leading-[1.3]">{title}</div>
 
-                <div className=''>
-
+                <div className='absolute top-4 left-4 flex items-center'>
+                    
                     {/* Rectangle 8 */}
-                    <div className="absolute left-[20px] top-[20px] w-[131px] h-[131px] bg-[#153535] rounded-[34px] shadow-[inset_1px_4px_10px_2px_rgba(6,25,34,1)] flex items-center justify-center">
+                    <div className="w-[131px] h-[131px] bg-[#153535] rounded-[34px] shadow-[inset_1px_4px_10px_2px_rgba(6,25,34,1)] flex items-center justify-center">
                         {/* Vector */}
                         <img src={iconsvg} alt="Bitcoin" className="w-[46px] h-[73px]" />
+                    </div>
+
+                    <div id="titulos" className="flex flex-col justify-center">
+                        {/* BTC */}
+                        <div className="relative left-12 text-[#FF7700] font-['Geist_Mono'] font-medium text-[48px] leading-[1.3]">{title}</div>
+
+                        {/* Bitcoin */}
+                        <div className="relative left-12 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[20px] leading-[1.3]">{titlecomplete}</div>
                     </div>
 
                 </div>
@@ -69,8 +76,7 @@ const Card = ({ title, titlecomplete, iconsvg, price }) => {
 
 
 
-                {/* Bitcoin */}
-                <div className="absolute left-[20px] top-[223px] w-[84px] h-[26px] text-[#FFFFFF] font-['Geist_Mono'] font-light text-[20px] leading-[1.3]">{titlecomplete}</div>
+
 
                 {/* Price */}
                 <div className="absolute left-[20px] top-[249px] w-[324px] h-[59px] text-[#FFFFFF] font-['Geist_Mono'] font-light text-[45px] leading-[1.3]">{price}</div>

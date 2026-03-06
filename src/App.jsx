@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    <div className='fundo'>
+    <div className='fundo overflow-x-hidden overflow-y-auto'>
         <div>
           <h1 className="p-3">oiiiii</h1>
         </div>
