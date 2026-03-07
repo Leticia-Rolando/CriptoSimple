@@ -2,7 +2,7 @@ import './Card.css';
 
 const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percentage24 }) => {
     return (
-        <div className="">
+        <div className="scale-65">
 
             <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma">
 
