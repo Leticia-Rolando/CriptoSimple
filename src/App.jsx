@@ -14,8 +14,8 @@ function App() {
           </figure>
         </header>
         <section className='pt-10 flex flex-col items-center'>
-          <div className='flex gap-2 items-center bg-[#061922b0] border-2 border-gray-800 py-2 px-3 rounded-full'>
-            <p className="font-['Geist_Mono'] font-light text-sm text-center text-zinc-200">Atualização dos dados a cada 5 min</p>
+          <div className='flex gap-2 items-center bg-[#061922b0] border-2 border-teal-950 py-2 px-3 rounded-full'>
+            <p className="font-['Geist_Mono'] font-light text-xs text-center text-zinc-200">Atualização dos dados a cada 5 min</p>
             <span class="relative flex size-3">
               <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
               <span class="relative inline-flex size-3 rounded-full bg-emerald-500"></span>

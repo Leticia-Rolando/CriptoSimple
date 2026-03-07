@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body{
+    scroll-behavior: smooth;
+}
+
 .fundo{
     min-height: 100dvh;
     width: 100%;
