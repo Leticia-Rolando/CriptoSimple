@@ -56,7 +56,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                     {/* Rectangle 8 */}
                     <div className="w-32.75 h-32.75 bg-[#153535] rounded-[34px] shadow-[inset_1px_4px_10px_2px_rgba(6,25,34,1)] flex items-center justify-center">
                         {/* Vector */}
-                        <img src={iconsvg} alt="Bitcoin" className="w-11.5 h-18.25" />
+                        <img src={iconsvg} alt="Bitcoin" />
                     </div>
 
                     <div id="titulos" className="absolute left-27 flex flex-col justify-center leading-[1.2]">

@@ -1,6 +1,7 @@
 import Card from './components/Card'
 import bitcoinIcon from './assets/svg/bitcoin-icon.svg';
 import sol from './assets/svg/sol.svg';
+import paxg from './assets/svg/paxg.svg';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
           </div>
           <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} color={"#FF7700"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
           <Card title={"SOL"} titlecomplete={"Solana"} iconsvg={sol} color={"#B64CEB"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
-          <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} color={"#FF7700"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
+          <Card title={"PAXG"} titlecomplete={"PAX Gold"} iconsvg={paxg} color={"#FF7700"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
         </section>
       </div>
     </>
