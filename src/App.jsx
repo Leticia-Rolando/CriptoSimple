@@ -23,7 +23,7 @@ function App() {
             </span>
           </div>
           <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} color={"#FF7700"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
-          <Card title={"SOL"} titlecomplete={"Solana"} iconsvg={sol} color={"#A940DD"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
+          <Card title={"SOL"} titlecomplete={"Solana"} iconsvg={sol} color={"#B64CEB"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
           <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} color={"#FF7700"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
         </section>
       </div>
