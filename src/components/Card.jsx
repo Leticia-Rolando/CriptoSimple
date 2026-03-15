@@ -1,6 +1,6 @@
 import './Card.css';
 
-const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percentage24 }) => {
+const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percentage24, descricaoIMG }) => {
     return (
         <div className="scale-65">
 
@@ -56,15 +56,15 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                     {/* Rectangle 8 */}
                     <div className="w-32.75 h-32.75 bg-[#153535] rounded-[34px] shadow-[inset_1px_4px_10px_2px_rgba(6,25,34,1)] flex items-center justify-center">
                         {/* Vector */}
-                        <img src={iconsvg} alt="Bitcoin" />
+                        <img src={iconsvg} alt={descricaoIMG} className='max-h-25'/>
                     </div>
 
                     <div id="titulos" className="absolute left-27 flex flex-col justify-center leading-[1.2]">
-                        {/* BTC */}
+                        {/* Titulo */}
                         <div className="relative left-12 font-['Geist_Mono'] font-medium text-[48px]" style={{ color: color }}
                         >{title}</div>
 
-                        {/* Bitcoin */}
+                        {/* Titulo Completo */}
                         <div className="relative left-12 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[20px]">{titlecomplete}</div>
                     </div>
 

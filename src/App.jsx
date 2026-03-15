@@ -23,9 +23,9 @@ function App() {
               <span class="relative inline-flex size-3 rounded-full bg-emerald-500"></span>
             </span>
           </div>
-          <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} color={"#FF7700"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
-          <Card title={"SOL"} titlecomplete={"Solana"} iconsvg={sol} color={"#B64CEB"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
-          <Card title={"PAXG"} titlecomplete={"PAX Gold"} iconsvg={paxg} color={"#FF7700"} price={"R$357.120,99"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
+          <Card title={"BTC"} titlecomplete={"Bitcoin"} iconsvg={bitcoinIcon} color={"#FF7700"} price={"R$357.120,99"} descricaoIMG={"Icone do Bitcoin"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
+          <Card title={"SOL"} titlecomplete={"Solana"} iconsvg={sol} color={"#B64CEB"} price={"R$357.120,99"} descricaoIMG={"Icone da Solana"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
+          <Card title={"PAXG"} titlecomplete={"PAX Gold"} iconsvg={paxg} color={"#EDE70A"} price={"R$357.120,99"} descricaoIMG={"Icone do Paxg"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
         </section>
       </div>
     </>
