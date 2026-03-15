@@ -9,8 +9,8 @@ function App() {
     <>
       <div className='fundo min-h-screen overflow-hidden'>
         <header className='flex flex-col items-center justify-center text-zinc-100 px-2'>
-          <h1 className="pt-50 font-['Geist_Mono'] font-medium text-[42px]">CriptoSimple</h1>
-          <p className="pt-12 pb-7 font-['Geist_Mono'] font-light text-lg text-center">Para você acompanhar o mercado cripto de forma simples</p>
+          <h1 className="pt-50 font-['Manufacturing_Consent'] text-[65px]">CriptoSimple</h1>
+          <p className="pt-8 pb-7 font-['Geist_Mono'] font-light text-lg text-center">Para você acompanhar o mercado cripto de forma simples</p>
           <figure className='w-8 h-8 animate-bounce'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" /><line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" /><polyline points="56 144 128 216 200 144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" /></svg>
           </figure>
