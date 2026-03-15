@@ -3,9 +3,9 @@ import './Card.css';
 const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percentage24, descricaoIMG }) => {
     return (
 
-        <div className='flex justify-center items-center -mx-16 -my-10 sm:m-0'>
-            
-            <div className="scale-65 origin-center">
+        <div className='flex justify-center items-center -my-10 sm:m-0'>
+
+            <div className="scale-66 origin-center">
 
                 <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma">
 
