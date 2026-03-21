@@ -28,7 +28,7 @@ function App() {
     return () => clearInterval(intervalo);
   }, []);
 
-  if (!coins) return <p className="font-['Geist_Mono'] font-light text-lg text-center text-black">Carregando cotações...</p>;
+  if (!coins) return <p className="font-['Geist_Mono'] font-light text-lg text-center text-black flex justify-center items-center">Carregando cotações...</p>;
 
 
   return (
