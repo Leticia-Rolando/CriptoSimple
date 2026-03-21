@@ -13,14 +13,35 @@ const LINK = fetch('https://api.coinpaprika.com/v1/tickers/link-chainlink?quotes
 
 export const fetchCripto = async () => {
 
-    try{
+    try {
         const ETHpromise = fetch('https://api.coinpaprika.com/v1/tickers/eth-ethereum?quotes=BRL');
         const BTCpromise = fetch('https://api.coinpaprika.com/v1/tickers/btc-bitcoin?quotes=BRL');
+        const PAXGpromise = fetch('https://api.coinpaprika.com/v1/tickers/paxg-pax-gold?quotes=BRL');
+        const SOLpromise = fetch('https://api.coinpaprika.com/v1/tickers/sol-solana?quotes=BRL');
+        const BNBpromise = fetch('https://api.coinpaprika.com/v1/tickers/bnb-binance-coin?quotes=BRL');
+        const HYPEpromise = fetch('https://api.coinpaprika.com/v1/tickers/hype-hyperliquid?quotes=BRL');
+        const SUIpromise = fetch('https://api.coinpaprika.com/v1/tickers/sui-sui?quotes=BRL');
+        const ZCASHpromise = fetch('https://api.coinpaprika.com/v1/tickers/zec-zcash?quotes=BRL');
+        const MONEROpromise = fetch('https://api.coinpaprika.com/v1/tickers/xmr-monero?quotes=BRL');
+        const XRPpromise = fetch('https://api.coinpaprika.com/v1/tickers/xrp-xrp?quotes=BRL');
+        const TRONpromise = fetch('https://api.coinpaprika.com/v1/tickers/trx-tron?quotes=BRL');
+        const LINKpromise = fetch('https://api.coinpaprika.com/v1/tickers/link-chainlink?quotes=BRL');
 
-        const [ETHresponse, BTCresponse] = await Promise.all([ETHpromise, BTCpromise]);
+        const [ETHresponse, BTCresponse, PAXGresponse, SOLresponse, BNBresponse, HYPEresponse, SUIresponse, ZCASHresponse, MONEROresponse, XRPresponse, TRONresponse, LINKresponse] 
+        = await Promise.all([ETHpromise, BTCpromise, PAXGpromise, SOLpromise, BNBpromise, HYPEpromise, SUIpromise, ZCASHpromise, MONEROpromise, XRPpromise, TRONpromise, LINKpromise]);
 
         const ETHdata = await ETHresponse.json();
         const BTCdata = await BTCresponse.json();
+        const PAXGdata = await PAXGresponse.json();
+        const SOLdata = await SOLresponse.json();
+        const BNBdata = await BNBresponse.json();
+        const HYPEdata = await HYPEresponse.json();
+        const SUIdata = await SUIresponse.json();
+        const ZCASHdata = await ZCASHresponse.json();
+        const MONEROdata = await MONEROresponse.json();
+        const XRPdata = await XRPresponse.json();
+        const TRONdata = await TRONresponse.json();
+        const LINKdata = await LINKresponse.json();
 
         return {
             eth: {
@@ -44,7 +65,7 @@ export const fetchCripto = async () => {
         };
 
 
-    } catch (error){
+    } catch (error) {
         console.log("Deu b.o aqui: ", error);
         return null;
     }
