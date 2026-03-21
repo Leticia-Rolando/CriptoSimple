@@ -38,23 +38,23 @@ function App() {
     <>
       <div className='fundo min-h-screen overflow-hidden'>
         <header className='flex flex-col items-center justify-center text-zinc-100 px-2'>
-          <h1 className="pt-50 font-['Manufacturing_Consent'] text-[65px]">CriptoSimple</h1>
-          <p className="pt-8 pb-7 font-['Geist_Mono'] font-light text-lg text-center">Para você acompanhar o mercado cripto de forma simples</p>
-          <figure className='w-8 h-8'>
+          <h1 className="pt-50 font-['Manufacturing_Consent'] text-[65px] 2xl:text-[85px]">CriptoSimple</h1>
+          <p className="pt-8 pb-7 font-['Geist_Mono'] font-light text-lg text-center 2xl:text-xl">Para você acompanhar o mercado cripto de forma simples</p>
+          <figure className='w-8 h-8 2xl:w-9 2xl:h-9'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" /><line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" /><polyline points="56 144 128 216 200 144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" /></svg>
           </figure>
         </header>
         <section>
           <div className='pt-10 flex flex-col items-center'>
             <div className='flex gap-2 items-center bg-[#061922b0] border-2 border-teal-950 py-2 px-3 rounded-full'>
-              <p className="font-['Geist_Mono'] font-light text-xs text-center text-zinc-200 md:text-sm">Atualização dos dados a cada 5 min</p>
+              <p className="font-['Geist_Mono'] font-light text-xs text-center text-zinc-200 md:text-sm 2xl:text-md">Atualização dos dados a cada 5 min</p>
               <span class="relative flex size-3">
                 <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                 <span class="relative inline-flex size-3 rounded-full bg-emerald-500"></span>
               </span>
             </div>
           </div>
-          <div className='flex flex-col items-center mt-2 md:mt-4 md:grid md:grid-cols-2 md:mx-4 md:gap-y-3 '>
+          <div className='flex flex-col items-center mt-2 mb-2 md:mt-4 md:grid md:grid-cols-2 md:mx-4 md:gap-y-3  lg:grid-cols-3 xl:grid-cols-4 2xl:gap-y-10 2xl:mt-10 2xl:mb-6'>
             {/*BTC*/}
             <Card title={coins.btc.symbol} titlecomplete={coins.btc.title} iconsvg={btc} color={"#FF7700"} price={coins.btc.price} descricaoIMG={"Icone do Bitcoin"} percentage1={coins.btc.percentage1} percentage6={coins.btc.percentage6} percentage12={coins.btc.percentage12} percentage24={coins.btc.percentage24} />
             {/*ETH*/}

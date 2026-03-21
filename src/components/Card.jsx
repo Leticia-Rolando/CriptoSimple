@@ -5,7 +5,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
 
         <div className='flex justify-center items-center -my-10 m-0'>
 
-            <div className="scale-68 md:scale-70 origin-center">
+            <div className="scale-68 md:scale-70 lg:scale-64 2xl:scale-80 origin-center">
 
                 <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma">
 
