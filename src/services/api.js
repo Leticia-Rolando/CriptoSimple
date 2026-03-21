@@ -11,14 +11,38 @@ const XRP = fetch('https://api.coinpaprika.com/v1/tickers/xrp-xrp?quotes=BRL');
 const TRON = fetch('https://api.coinpaprika.com/v1/tickers/trx-tron?quotes=BRL');
 const LINK = fetch('https://api.coinpaprika.com/v1/tickers/link-chainlink?quotes=BRL');*/
 
-export const fetchMoedas = async (coinID) => {
+const fetchCripto = async () => {
 
     try{
-        const resposta = await fetch(`https://api.coinpaprika.com/v1/tickers/${coinID}?quotes=BRL`);
-        if (!resposta.ok) throw new Error(`Erro ao buscar ${coinID}`);
+        const ETHpromise = fetch('https://api.coinpaprika.com/v1/tickers/eth-ethereum?quotes=BRL');
+        const BTCpromise = fetch('https://api.coinpaprika.com/v1/tickers/btc-bitcoin?quotes=BRL');
 
-        const data = await resposta.json();
-        return data;
+        const [ETHresponse, BTCresponse] = await Promise.all([ETHpromise, BTCpromise]);
+
+        const ETHdata = await ETHresponse.json();
+        const BTCdata = await BTCresponse.json();
+
+        return {
+            eth: {
+                title: ETHdata.name,
+                symbol: ETHdata.symbol,
+                price: ETHdata.quotes.BRL.price,
+                percentage1: ETHdata.quotes.BRL.percent_change_1h,
+                percentage6: ETHdata.quotes.BRL.percent_change_6h,
+                percentage12: ETHdata.quotes.BRL.percent_change_12h,
+                percentage24: ETHdata.quotes.BRL.percent_change_24h
+            },
+            btc: {
+                title: BTCdata.name,
+                symbol: BTCdata.symbol,
+                price: BTCdata.quotes.BRL.price,
+                percentage1: BTCdata.quotes.BRL.percent_change_1h,
+                percentage6: BTCdata.quotes.BRL.percent_change_6h,
+                percentage12: BTCdata.quotes.BRL.percent_change_12h,
+                percentage24: BTCdata.quotes.BRL.percent_change_24h
+            }
+        };
+
 
     } catch (error){
         console.log("Deu b.o aqui: ", error);
