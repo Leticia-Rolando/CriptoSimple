@@ -76,7 +76,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
 
 
                     {/* Price */}
-                    <div className="absolute left-5 top-50 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[45px] leading-[1.3]">{price}</div>
+                    <div className="absolute left-5 top-50 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[45px] leading-[1.3]">{price?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
                 </div>
             </div>
 

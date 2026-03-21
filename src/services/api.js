@@ -11,7 +11,7 @@ const XRP = fetch('https://api.coinpaprika.com/v1/tickers/xrp-xrp?quotes=BRL');
 const TRON = fetch('https://api.coinpaprika.com/v1/tickers/trx-tron?quotes=BRL');
 const LINK = fetch('https://api.coinpaprika.com/v1/tickers/link-chainlink?quotes=BRL');*/
 
-const fetchCripto = async () => {
+export const fetchCripto = async () => {
 
     try{
         const ETHpromise = fetch('https://api.coinpaprika.com/v1/tickers/eth-ethereum?quotes=BRL');
@@ -46,6 +46,6 @@ const fetchCripto = async () => {
 
     } catch (error){
         console.log("Deu b.o aqui: ", error);
-        return[];
+        return null;
     }
 }
