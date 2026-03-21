@@ -63,7 +63,13 @@ function App() {
           {/*ZCASH*/}
           <Card title={coins.zcash.symbol} titlecomplete={coins.zcash.title} iconsvg={zcash} color={"#F3B724"} price={coins.zcash.price} descricaoIMG={"Icone do Zcash"} percentage1={coins.zcash.percentage1} percentage6={coins.zcash.percentage6} percentage12={coins.zcash.percentage12} percentage24={coins.zcash.percentage24}/>
           {/*XMR*/}
-          <Card title={coins.xmr.symbol} titlecomplete={coins.xmr.title} iconsvg={xmr} color={"#F3B724"} price={coins.xmr.price} descricaoIMG={"Icone do XMR"} percentage1={coins.xmr.percentage1} percentage6={coins.xmr.percentage6} percentage12={coins.xmr.percentage12} percentage24={coins.xmr.percentage24}/>
+          <Card title={coins.xmr.symbol} titlecomplete={coins.xmr.title} iconsvg={xmr} color={"#FA6800"} price={coins.xmr.price} descricaoIMG={"Icone do XMR"} percentage1={coins.xmr.percentage1} percentage6={coins.xmr.percentage6} percentage12={coins.xmr.percentage12} percentage24={coins.xmr.percentage24}/>
+          {/*XRP*/}
+          <Card title={coins.xrp.symbol} titlecomplete={coins.xrp.title} iconsvg={xrp} color={"#FFFFFF"} price={coins.xrp.price} descricaoIMG={"Icone do XRP"} percentage1={coins.xrp.percentage1} percentage6={coins.xrp.percentage6} percentage12={coins.xrp.percentage12} percentage24={coins.xrp.percentage24}/>
+          {/*TRON*/}
+          <Card title={coins.tron.symbol} titlecomplete={coins.tron.title} iconsvg={tron} color={"#F70112"} price={coins.tron.price} descricaoIMG={"Icone do Tron"} percentage1={coins.tron.percentage1} percentage6={coins.tron.percentage6} percentage12={coins.tron.percentage12} percentage24={coins.tron.percentage24}/>
+          {/*LINK*/}
+          <Card title={coins.link.symbol} titlecomplete={coins.link.title} iconsvg={link} color={"#0746F7"} price={coins.link.price} descricaoIMG={"Icone do Chainlink"} percentage1={coins.link.percentage1} percentage6={coins.link.percentage6} percentage12={coins.link.percentage12} percentage24={coins.link.percentage24}/>
         </section>
       </div>
     </>
