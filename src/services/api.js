@@ -61,6 +61,96 @@ export const fetchCripto = async () => {
                 percentage6: BTCdata.quotes.BRL.percent_change_6h,
                 percentage12: BTCdata.quotes.BRL.percent_change_12h,
                 percentage24: BTCdata.quotes.BRL.percent_change_24h
+            },
+            paxg: {
+                title: PAXGdata.name,
+                symbol: PAXGdata.symbol,
+                price: PAXGdata.quotes.BRL.price,
+                percentage1: PAXGdata.quotes.BRL.percent_change_1h,
+                percentage6: PAXGdata.quotes.BRL.percent_change_6h,
+                percentage12: PAXGdata.quotes.BRL.percent_change_12h,
+                percentage24: PAXGdata.quotes.BRL.percent_change_24h
+            },
+            sol: {
+                title: SOLdata.name,
+                symbol: SOLdata.symbol,
+                price: SOLdata.quotes.BRL.price,
+                percentage1: SOLdata.quotes.BRL.percent_change_1h,
+                percentage6: SOLdata.quotes.BRL.percent_change_6h,
+                percentage12: SOLdata.quotes.BRL.percent_change_12h,
+                percentage24: SOLdata.quotes.BRL.percent_change_24h
+            },
+            bnb: {
+                title: BNBdata.name,
+                symbol: BNBdata.symbol,
+                price: BNBdata.quotes.BRL.price,
+                percentage1: BNBdata.quotes.BRL.percent_change_1h,
+                percentage6: BNBdata.quotes.BRL.percent_change_6h,
+                percentage12: BNBdata.quotes.BRL.percent_change_12h,
+                percentage24: BNBdata.quotes.BRL.percent_change_24h
+            },
+            hype: {
+                title: HYPEdata.name,
+                symbol: HYPEdata.symbol,
+                price: HYPEdata.quotes.BRL.price,
+                percentage1: HYPEdata.quotes.BRL.percent_change_1h,
+                percentage6: HYPEdata.quotes.BRL.percent_change_6h,
+                percentage12: HYPEdata.quotes.BRL.percent_change_12h,
+                percentage24: HYPEdata.quotes.BRL.percent_change_24h
+            },
+            sui: {
+                title: SUIdata.name,
+                symbol: SUIdata.symbol,
+                price: SUIdata.quotes.BRL.price,
+                percentage1: SUIdata.quotes.BRL.percent_change_1h,
+                percentage6: SUIdata.quotes.BRL.percent_change_6h,
+                percentage12: SUIdata.quotes.BRL.percent_change_12h,
+                percentage24: SUIdata.quotes.BRL.percent_change_24h
+            },
+            zcash: {
+                title: ZCASHdata.name,
+                symbol: ZCASHdata.symbol,
+                price: ZCASHdata.quotes.BRL.price,
+                percentage1: ZCASHdata.quotes.BRL.percent_change_1h,
+                percentage6: ZCASHdata.quotes.BRL.percent_change_6h,
+                percentage12: ZCASHdata.quotes.BRL.percent_change_12h,
+                percentage24: ZCASHdata.quotes.BRL.percent_change_24h
+            },
+            monero: {
+                title: MONEROdata.name,
+                symbol: MONEROdata.symbol,
+                price: MONEROdata.quotes.BRL.price,
+                percentage1: MONEROdata.quotes.BRL.percent_change_1h,
+                percentage6: MONEROdata.quotes.BRL.percent_change_6h,
+                percentage12: MONEROdata.quotes.BRL.percent_change_12h,
+                percentage24: MONEROdata.quotes.BRL.percent_change_24h
+            },
+            xrp: {
+                title: XRPdata.name,
+                symbol: XRPdata.symbol,
+                price: XRPdata.quotes.BRL.price,
+                percentage1: XRPdata.quotes.BRL.percent_change_1h,
+                percentage6: XRPdata.quotes.BRL.percent_change_6h,
+                percentage12: XRPdata.quotes.BRL.percent_change_12h,
+                percentage24: XRPdata.quotes.BRL.percent_change_24h
+            },
+            tron: {
+                title: TRONdata.name,
+                symbol: TRONdata.symbol,
+                price: TRONdata.quotes.BRL.price,
+                percentage1: TRONdata.quotes.BRL.percent_change_1h,
+                percentage6: TRONdata.quotes.BRL.percent_change_6h,
+                percentage12: TRONdata.quotes.BRL.percent_change_12h,
+                percentage24: TRONdata.quotes.BRL.percent_change_24h
+            },
+            link: {
+                title: LINKdata.name,
+                symbol: LINKdata.symbol,
+                price: LINKdata.quotes.BRL.price,
+                percentage1: LINKdata.quotes.BRL.percent_change_1h,
+                percentage6: LINKdata.quotes.BRL.percent_change_6h,
+                percentage12: LINKdata.quotes.BRL.percent_change_12h,
+                percentage24: LINKdata.quotes.BRL.percent_change_24h
             }
         };
 
