@@ -3,9 +3,9 @@ import './Card.css';
 const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percentage6, percentage12, percentage24, descricaoIMG }) => {
     return (
 
-        <div className='flex justify-center items-center -my-10 sm:m-0'>
+        <div className='flex justify-center items-center -my-10 m-0'>
 
-            <div className="scale-68 origin-center">
+            <div className="scale-68 md:scale-70 origin-center">
 
                 <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma">
 
@@ -16,7 +16,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                             Quando é verde: bg-[rgba(6,217,98,0.2)]  border-[#06D962]  text-[#06D962]  
                         */}
 
-                        <div className="flex flex-col items-center gap-4">
+                        <div className="flex flex-col items-center gap-4 mb-2">
                             {/* Percentage boxes */}
 
                             {/* 1h */}
