@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { fetchCripto } from './services/api'
-import Card from './components/Card'
+import { fetchCripto } from './services/api';
+import { mockData } from './services/mock';
+import Card from './components/Card';
 import btc from './assets/svg/bitcoin-icon.svg';
 import eth from './assets/svg/eth.svg';
 import sol from './assets/svg/sol.svg';
@@ -18,14 +19,16 @@ function App() {
   const [coins, setCoins] = useState(null);
 
   useEffect(() => {
-    const getData = async () => {
+    /*const getData = async () => {
       const resultado = await fetchCripto();
       setCoins(resultado);
     };
     getData();
 
     const intervalo = setInterval(getData, 300000);
-    return () => clearInterval(intervalo);
+    return () => clearInterval(intervalo);*/
+
+    setCoins(mockData);
   }, []);
 
   if (!coins) return <p className="font-['Geist_Mono'] font-light text-lg text-center text-black flex justify-center items-center">Carregando cotações...</p>;
