@@ -9,13 +9,13 @@ export const fetchCripto = async () => {
         const HYPEpromise = fetch('https://api.coinpaprika.com/v1/tickers/hype-hyperliquid?quotes=BRL');
         const SUIpromise = fetch('https://api.coinpaprika.com/v1/tickers/sui-sui?quotes=BRL');
         const ZCASHpromise = fetch('https://api.coinpaprika.com/v1/tickers/zec-zcash?quotes=BRL');
-        const MONEROpromise = fetch('https://api.coinpaprika.com/v1/tickers/xmr-monero?quotes=BRL');
+        const XMRpromise = fetch('https://api.coinpaprika.com/v1/tickers/xmr-monero?quotes=BRL');
         const XRPpromise = fetch('https://api.coinpaprika.com/v1/tickers/xrp-xrp?quotes=BRL');
         const TRONpromise = fetch('https://api.coinpaprika.com/v1/tickers/trx-tron?quotes=BRL');
         const LINKpromise = fetch('https://api.coinpaprika.com/v1/tickers/link-chainlink?quotes=BRL');
 
-        const [ETHresponse, BTCresponse, PAXGresponse, SOLresponse, BNBresponse, HYPEresponse, SUIresponse, ZCASHresponse, MONEROresponse, XRPresponse, TRONresponse, LINKresponse] 
-        = await Promise.all([ETHpromise, BTCpromise, PAXGpromise, SOLpromise, BNBpromise, HYPEpromise, SUIpromise, ZCASHpromise, MONEROpromise, XRPpromise, TRONpromise, LINKpromise]);
+        const [ETHresponse, BTCresponse, PAXGresponse, SOLresponse, BNBresponse, HYPEresponse, SUIresponse, ZCASHresponse, XMRresponse, XRPresponse, TRONresponse, LINKresponse] 
+        = await Promise.all([ETHpromise, BTCpromise, PAXGpromise, SOLpromise, BNBpromise, HYPEpromise, SUIpromise, ZCASHpromise, XMRpromise, XRPpromise, TRONpromise, LINKpromise]);
 
         const ETHdata = await ETHresponse.json();
         const BTCdata = await BTCresponse.json();
@@ -25,7 +25,7 @@ export const fetchCripto = async () => {
         const HYPEdata = await HYPEresponse.json();
         const SUIdata = await SUIresponse.json();
         const ZCASHdata = await ZCASHresponse.json();
-        const MONEROdata = await MONEROresponse.json();
+        const XMRdata = await XMRresponse.json();
         const XRPdata = await XRPresponse.json();
         const TRONdata = await TRONresponse.json();
         const LINKdata = await LINKresponse.json();
@@ -103,14 +103,14 @@ export const fetchCripto = async () => {
                 percentage12: ZCASHdata.quotes.BRL.percent_change_12h,
                 percentage24: ZCASHdata.quotes.BRL.percent_change_24h
             },
-            monero: {
-                title: MONEROdata.name,
-                symbol: MONEROdata.symbol,
-                price: MONEROdata.quotes.BRL.price,
-                percentage1: MONEROdata.quotes.BRL.percent_change_1h,
-                percentage6: MONEROdata.quotes.BRL.percent_change_6h,
-                percentage12: MONEROdata.quotes.BRL.percent_change_12h,
-                percentage24: MONEROdata.quotes.BRL.percent_change_24h
+            xmr: {
+                title: XMRdata.name,
+                symbol: XMRdata.symbol,
+                price: XMRdata.quotes.BRL.price,
+                percentage1: XMRdata.quotes.BRL.percent_change_1h,
+                percentage6: XMRdata.quotes.BRL.percent_change_6h,
+                percentage12: XMRdata.quotes.BRL.percent_change_12h,
+                percentage24: XMRdata.quotes.BRL.percent_change_24h
             },
             xrp: {
                 title: XRPdata.name,
