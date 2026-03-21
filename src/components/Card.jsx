@@ -68,7 +68,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                             <img src={iconsvg} alt={descricaoIMG} className='max-h-25' />
                         </div>
 
-                        <div id="titulos" className="absolute left-27 flex flex-col justify-center items-center leading-[1.2]">
+                        <div id="titulos" className="absolute left-27 flex flex-col justify-center  leading-[1.2]">
                             {/* Titulo */}
                             <div className="relative left-12 font-['Geist_Mono'] font-medium text-[48px]" style={{ color: color }}
                             >{title}</div>
