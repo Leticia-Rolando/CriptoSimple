@@ -12,13 +12,17 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                     {/* Rectangle 9 lateral */}
                     <div className="absolute right-0 top-0 w-30.5 h-77.75 bg-[#061922] rounded-[0px_34px_34px_0px] flex items-center justify-center">
 
+                        {/*Quando é vermelho: bg-[rgba(241,86,83,0.2)]  border-[#F15653] text-[#F15653]
+                            Quando é verde: bg-[rgba(6,217,98,0.2)]  border-[#06D962]  text-[#06D962]  
+                        */}
+
                         <div className="flex flex-col items-center mb-2">
                             {/* Percentage boxes */}
                             {/* 1h */}
                             <div className="relative w-23 h-13.75">
                                 <div className="absolute left-9 top-0 w-5 h-5.25 text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">1h</div>
-                                <div className="absolute left-0 top-7 w-23 h-6.75 bg-[rgba(241,86,83,0.2)] border border-[#F15653] rounded-[8px]">
-                                    <div className="absolute left-4.25 top-0.75 w-14.5 h-5.25 text-[#F15653] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">{percentage1}%</div>
+                                <div className={`absolute left-0 top-7 w-23 h-6.75 border rounded-[8px] ${percentage1 > 0 ? 'bg-[rgba(6,217,98,0.2)]  border-[#06D962]' : 'bg-[rgba(241,86,83,0.2)]  border-[#F15653]'}`}>
+                                    <div className={ `absolute left-4.25 top-0.75 w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage1 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}` }>{percentage1}%</div>
                                 </div>
                                 <div className="absolute left-0 top-5.25 w-23 h-0 border-t border-[#6B74A3]"></div>
                             </div>
@@ -62,7 +66,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                             <img src={iconsvg} alt={descricaoIMG} className='max-h-25' />
                         </div>
 
-                        <div id="titulos" className="absolute left-27 flex flex-col justify-center leading-[1.2]">
+                        <div id="titulos" className="absolute left-27 flex flex-col justify-center items-center leading-[1.2]">
                             {/* Titulo */}
                             <div className="relative left-12 font-['Geist_Mono'] font-medium text-[48px]" style={{ color: color }}
                             >{title}</div>
@@ -76,7 +80,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
 
 
                     {/* Price */}
-                    <div className="absolute left-5 top-50 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[45px] leading-[1.3]">{price?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
+                    <div className="absolute left-5 top-50 text-[#FFFFFF] font-['Geist_Mono'] font-light text-[45px] leading-[1.3]">{price?.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace(/\u00a0/g, '')}</div>
                 </div>
             </div>
 

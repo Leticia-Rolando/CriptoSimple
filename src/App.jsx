@@ -37,7 +37,7 @@ function App() {
               <span class="relative inline-flex size-3 rounded-full bg-emerald-500"></span>
             </span>
           </div>
-            <Card title={coins.btc.symbol} titlecomplete={coins.btc.title} iconsvg={btc} color={"#FF7700"} price={coins.btc.price} descricaoIMG={"Icone do Bitcoin"} percentage1={-0.39} percentage6={-1.49} percentage12={1.02} percentage24={2.39} />
+            <Card title={coins.btc.symbol} titlecomplete={coins.btc.title} iconsvg={btc} color={"#FF7700"} price={coins.btc.price} descricaoIMG={"Icone do Bitcoin"} percentage1={coins.btc.percentage1} percentage6={coins.btc.percentage6} percentage12={coins.btc.percentage12} percentage24={coins.btc.percentage24} />
         </section>
       </div>
     </>
