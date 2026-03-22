@@ -4,7 +4,7 @@
 
 ## :white_check_mark: Tópicos
 - [Descrição do Projeto](#file_folder-descrição-do-projeto);
-- [Descrição da API](#gear-descrição-da-api);
+- [Aplicação da API](#gear-aplicação-da-api);
 - [Demonstração e Protótipo](#computer-demonstração-e-protótipo);
 - [Tecnologias Utilizadas](#hammer-tecnologias-utilizadas);
 - [Acessar o Projeto](#link-acessar-o-projeto).
@@ -249,7 +249,6 @@ export const fetchCripto = async () => {
     }
 }
 ```
-
 
 
 ## :computer: Demonstração e Protótipo
