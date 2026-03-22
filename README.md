@@ -12,6 +12,8 @@
 ## :file_folder: Descrição do Projeto
 Feito para resolver a complexidade e o excesso de informações no mercado de criptomoedas, **CriptoSimple** mostra as criptos mais comentadas do mercado de forma simplificada, mostrando apenas o essencial: **Nome, Preço e Aumento/Decréscimo.** 
 
+O projeto foi realizado usando `React v19.2.0` e `TailwindCSS v4.2.1` como frameworks principais, ambos instalados por meio do `Vite v7.3.1`
+
 
 ## :gear: Descrição da API
 
