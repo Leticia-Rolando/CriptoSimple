@@ -10,6 +10,7 @@
 - [Acessar o Projeto](#link-acessar-o-projeto).
 
 ## :file_folder: Descrição do Projeto
+Feito para resolver a complexidade e o excesso de informações no mercado de criptomoedas, **CriptoSimple** mostra as criptos mais comentadas do mercado de forma simplificada, mostrando apenas o essencial: **Nome, Preço e Aumento/Decréscimo.** 
 
 
 ## :gear: Descrição da API
@@ -17,7 +18,7 @@
 
 ## :computer: Demonstração
 
-<img alt="Mockup" src="images/mockup/mockup1.jpg">
+<img alt="Mockup" src="">
 
 ## :hammer: Tecnologias Utilizadas
 
