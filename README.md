@@ -14,7 +14,7 @@ Feito para resolver a complexidade e o excesso de informações no mercado de cr
 
 O projeto foi realizado usando `React v19.2.0` e `Tailwind CSS v4.2.1` como frameworks principais, ambos instalados por meio do `Vite v7.3.1`. Além de ter sido utilizado `Figma MCP` para agilizar e criar da forma mais fiel possível o **Card Component** prototipado no Figma.
 
-Para a requisição das informações de cada criptomoeda foi utilizada a **:hot_pepper:CoinPaprika API** - voltada para disponibilizar em tempo real **preços, volume, market cap** e muitos mais de centenas de criptomoedas.
+Para a requisição das informações de cada criptomoeda foi utilizada a **:hot_pepper:CoinPaprika API** - voltada para disponibilizar em tempo real **preços, volume, market cap** e muito mais de milhares de criptomoedas.
 
 
 ## :gear: Aplicação da API
@@ -253,7 +253,7 @@ export const fetchCripto = async () => {
 
 ## :computer: Demonstração e Protótipo
 
-<img alt="Mockup" src="">
+<img alt="Mockup" src="./src/assets/images/card prototipo.jpg">
 
 ## :hammer: Tecnologias Utilizadas
 
