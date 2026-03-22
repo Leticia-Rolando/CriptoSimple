@@ -20,6 +20,8 @@ Para a requisição das informações de cada criptomoeda foi utilizada a **:hot
 ## :gear: Aplicação da API
 A requisição da API foi feita usando `fetch()` com o método `GET`, buscando apenas **nome, símbolo, preço e mudança de porcentagem em 1h/6h/12h/24h**; onde cada criptomoeda possui um `id`.
 
+<div align="center">
+
 | Id 
 | :--- | 
 | btc-bitcoin |
@@ -35,6 +37,9 @@ A requisição da API foi feita usando `fetch()` com o método `GET`, buscando a
 | trx-tron |
 | link-chainlink |
 
+</div>
+
+Devido ao uso gratuito da API, na [documentação](https://docs.coinpaprika.com/api-reference/rest-api/introduction) é dito que só pode ser realizada **uma** requisição a cada **5 minutos** e no **máximo 20.000** requisições totais por mês; além de que não é possível no plano free usar apenas um link para chamar todos os `ids` de uma só vez, sendo necessário um `fetch` para cada moeda.
 
 ```javascript
 export const fetchCripto = async () => {
