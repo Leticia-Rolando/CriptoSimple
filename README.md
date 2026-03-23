@@ -1,6 +1,6 @@
 # CriptoSimple
 
-<img alt="Static Badge" src="https://img.shields.io/badge/Criado_em-março/2026-purple?style=for-the-badge"> <img alt="Status do Projeto" src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge">
+<img alt="Static Badge" src="https://img.shields.io/badge/mar%C3%A7o%2F2026-mar%C3%A7o_2026?style=for-the-badge&label=criado%20em&color=%2350D2C1"> <img alt="Status do Projeto" src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge">
 
 ## :white_check_mark: Tópicos
 - [Descrição do Projeto](#file_folder-descrição-do-projeto);
