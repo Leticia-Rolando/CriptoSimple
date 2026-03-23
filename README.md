@@ -254,7 +254,7 @@ export const fetchCripto = async () => {
 
 
     } catch (error) {
-        console.log("Deu b.o aqui: ", error);
+        console.log("Erro na requisição da API: ", error);
         return null;
     }
 }
@@ -288,6 +288,37 @@ export const fetchCripto = async () => {
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=vite" height="40" alt="vite logo"  />
 </div>
+
+### Figma MCP
+
+#### Definição
+O `Figma MCP` é um padrão de código aberto criado para conectar o Figma a modelos de IA, permitindo que agentes de inteligência artificial "leiam" e entendam arquivos de design, componentes e variáveis em tempo real. Ele traduz designs visuais em código estruturado, facilitando a geração automática de componentes, layouts e estilos consistentes com o design original.
+
+#### Como foi utilizado
+Com o `.gitignore` não foi enviado ao repositório a pasta `.vscode` nem o arquivo `mcp.json` - responsável por configuar o `MCP Server` - para evitar vazamentos de dados sensíveis. De acordo com a documentação do [Figma-Context-MCP](https://github.com/GLips/Figma-Context-MCP.git), a configuração padrão do `mcp.json` deve ser assim para Windows - caso utlilize o **Cursor** como IDE de desenvolvimento:
+
+```json
+{
+  "mcpServers": {
+    "Framelink MCP for Figma": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+    }
+  }
+}
+```
+
+Como utilizei o **VsCode**, o código sofre uma leve mudança: ao invés de "mcpServers", é colocado apenas "servers".
+```json
+{
+  "servers": {
+    "Framelink MCP for Figma": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+    }
+  }
+}
+```
 
 ## :link: Acessar o Projeto
 
