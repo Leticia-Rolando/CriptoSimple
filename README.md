@@ -4,6 +4,7 @@
 
 ## :white_check_mark: Tópicos
 - [Descrição do Projeto](#file_folder-descrição-do-projeto);
+- [Estrutura do Projeto](#file_folder-estrutura-do-projeto);
 - [Aplicação da API](#gear-aplicação-da-api);
 - [Demonstração e Protótipo](#computer-demonstração-e-protótipo);
 - [Tecnologias Utilizadas](#hammer-tecnologias-utilizadas);
@@ -15,6 +16,13 @@ Feito para resolver a complexidade e o excesso de informações no mercado de cr
 O projeto foi realizado usando `React v19.2.0` e `Tailwind CSS v4.2.1` como frameworks principais, ambos instalados por meio do `Vite v7.3.1`. Além de ter sido utilizado `Figma MCP` para agilizar e criar da forma mais fiel possível o **Card Component** prototipado no Figma.
 
 Para a requisição das informações de cada criptomoeda foi utilizada a **:hot_pepper:CoinPaprika API** - voltada para disponibilizar em tempo real **preços, volume, market cap** e muito mais de milhares de criptomoedas.
+
+## :file_folder: Estrutura do Projeto
+- `src/components`: Componentes reutilizáveis (Card, Header, etc).
+- `src/services`: Lógica de consumo de APIs.
+- `src/services/api.js`: Código para consumo da CoinPaprika API.
+- `src/services/mock.js`: Código para consumo de um mock provisório caso a API não funcione.
+- `src/assets`: Imagens e estilos globais.
 
 
 ## :gear: Aplicação da API
