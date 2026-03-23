@@ -5,12 +5,12 @@
 <img alt="Static Badge" src="https://img.shields.io/badge/mar%C3%A7o%2F2026-mar%C3%A7o_2026?style=for-the-badge&label=criado%20em&color=%23153535"> <img alt="Status do Projeto" src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge"> </div>
 
 ## :white_check_mark: Tópicos
-- [Descrição do Projeto](#file_folder-descrição-do-projeto);
-- [Estrutura do Projeto](#card_index_dividers-estrutura-do-projeto);
-- [Aplicação da API](#gear-aplicação-da-api);
-- [Demonstração e Protótipo](#computer-demonstração-e-protótipo);
-- [Tecnologias Utilizadas](#hammer-tecnologias-utilizadas);
-- [Acessar o Projeto](#link-acessar-o-projeto).
+* [Descrição do Projeto](#file_folder-descrição-do-projeto);
+* [Estrutura do Projeto](#card_index_dividers-estrutura-do-projeto);
+* [Aplicação da API](#gear-aplicação-da-api);
+* [Demonstração e Protótipo](#computer-demonstração-e-protótipo);
+* [Tecnologias Utilizadas](#hammer-tecnologias-utilizadas);
+* [Acessar o Projeto](#link-acessar-o-projeto).
 
 ## :file_folder: Descrição do Projeto
 O **CriptoSimple** é um dashboard minimalista focado na **Experiência do Usuário (UX)**, desenvolvido para resolver a sobrecarga de informações comum no mercado de criptomoedas. A aplicação filtra o ruído visual de exchanges complexas e entrega apenas os dados essenciais para uma consulta rápida: **Nome, Símbolo, Preço (em BRL) e Variações Percentuais.**
