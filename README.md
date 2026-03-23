@@ -4,7 +4,7 @@
 
 ## :white_check_mark: Tópicos
 - [Descrição do Projeto](#file_folder-descrição-do-projeto);
-- [Estrutura do Projeto](#file_folder-estrutura-do-projeto);
+- [Estrutura do Projeto](#card_index_dividers-estrutura-do-projeto);
 - [Aplicação da API](#gear-aplicação-da-api);
 - [Demonstração e Protótipo](#computer-demonstração-e-protótipo);
 - [Tecnologias Utilizadas](#hammer-tecnologias-utilizadas);
@@ -17,12 +17,13 @@ O projeto foi realizado usando `React v19.2.0` e `Tailwind CSS v4.2.1` como fram
 
 Para a requisição das informações de cada criptomoeda foi utilizada a **:hot_pepper:CoinPaprika API** - voltada para disponibilizar em tempo real **preços, volume, market cap** e muito mais de milhares de criptomoedas.
 
-## :file_folder: Estrutura do Projeto
+## :card_index_dividers: Estrutura do Projeto
 - `src/components`: Componentes reutilizáveis (Card, Header, etc).
 - `src/services`: Lógica de consumo de APIs.
 - `src/services/api.js`: Código para consumo da CoinPaprika API.
 - `src/services/mock.js`: Código para consumo de um mock provisório caso a API não funcione.
 - `src/assets`: Imagens e estilos globais.
+- `.gitignore`: Arquivos e pastas a não serem enviados/rastreados ao repositário remoto, evitando de vazar arquivos sensíveis (`.vscode`) ou de carregar dependências pesadas (`node_modules`).
 
 
 ## :gear: Aplicação da API
