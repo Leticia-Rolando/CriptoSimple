@@ -143,7 +143,7 @@ export const fetchCripto = async () => {
 
 
     } catch (error) {
-        console.log("Deu b.o aqui: ", error);
+        console.log("Erro ao buscar dados da API: ", error);
         return null;
     }
 }
