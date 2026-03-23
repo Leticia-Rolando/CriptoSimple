@@ -308,7 +308,7 @@ Com o `.gitignore` não foi enviado ao repositório a pasta `.vscode` nem o arqu
 }
 ```
 
-Como utilizei o **VsCode**, o código sofre uma leve mudança: ao invés de "mcpServers", é colocado apenas "servers".
+Como utilizei o **VsCode**, o código sofre uma leve mudança: ao invés de `"mcpServers"`, é colocado apenas `"servers"`.
 ```json
 {
   "servers": {
@@ -319,6 +319,8 @@ Como utilizei o **VsCode**, o código sofre uma leve mudança: ao invés de "mcp
   }
 }
 ```
+
+Para que meu Figma fosse acessado pelo `MCP Server`, foi necessário colocar meu **Figma Token** no `"--figma-api-key=YOUR-KEY"`. Como dito anteriormente, o `.gitignore` foi utilizado exatamente para proteger dados sensíveis, um deles sendo 
 
 ## :link: Acessar o Projeto
 
