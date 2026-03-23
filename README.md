@@ -24,7 +24,7 @@ Para a requisição das informações de cada criptomoeda foi utilizada a **:hot
 - `src/services/mock.js`: Consumo de um mock provisório caso a API não funcione.
 - `src/assets`: Imagens e estilos globais.
 - `.gitignore`: Arquivos e pastas a não serem enviados/rastreados ao repositário remoto, evitando de vazar arquivos sensíveis (`.vscode`) ou de carregar dependências pesadas (`node_modules`).
-- `SKILL.md`: Arquivo para descrever exatamente o que a IA deve ou não fazer na geração de componentes `react`.
+- `SKILL.md`: Usado pela IA na conversão de designs complexos em componentes funcionais utilizando `React` e `Tailwind CSS`, com foco em fidelidade visual absoluta (espaçamentos, tipografia e cores).
 
 
 ## :gear: Aplicação da API
