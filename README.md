@@ -1,6 +1,8 @@
+<div align="center">
+  
 # CriptoSimple
 
-<img alt="Static Badge" src="https://img.shields.io/badge/mar%C3%A7o%2F2026-mar%C3%A7o_2026?style=for-the-badge&label=criado%20em&color=%23153535"> <img alt="Status do Projeto" src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge">
+<img alt="Static Badge" src="https://img.shields.io/badge/mar%C3%A7o%2F2026-mar%C3%A7o_2026?style=for-the-badge&label=criado%20em&color=%23153535"> <img alt="Status do Projeto" src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge"> </div>
 
 ## :white_check_mark: Tópicos
 - [Descrição do Projeto](#file_folder-descrição-do-projeto);
@@ -320,7 +322,7 @@ Como utilizei o **VsCode**, o código sofre uma leve mudança: ao invés de `"mc
 }
 ```
 
-Para que meu Figma fosse acessado pelo `MCP Server`, foi necessário colocar meu **Figma Token** no `"--figma-api-key=YOUR-KEY"`. Como dito anteriormente, o `.gitignore` foi utilizado exatamente para proteger dados sensíveis, um deles sendo 
+Para que meu Figma fosse acessado pelo `MCP Server`, foi necessário colocar meu **Figma Token** no `"--figma-api-key=YOUR-KEY"`. Como dito anteriormente, o `.gitignore` foi utilizado exatamente para proteger dados sensíveis, um deles sendo o `mcp.json` que **contém** o token privado.
 
 ## :link: Acessar o Projeto
 
