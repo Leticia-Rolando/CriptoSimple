@@ -11,19 +11,20 @@
 - [Acessar o Projeto](#link-acessar-o-projeto).
 
 ## :file_folder: Descrição do Projeto
-Feito para resolver a complexidade e o excesso de informações no mercado de criptomoedas, **CriptoSimple** mostra as criptos mais comentadas do mercado de forma simplificada, mostrando apenas o essencial: **Nome, Preço e Aumento/Decréscimo.** 
+O **CriptoSimple** é um dashboard minimalista focado na **Experiência do Usuário (UX)**, desenvolvido para resolver a sobrecarga de informações comum no mercado de criptomoedas. A aplicação filtra o ruído visual de exchanges complexas e entrega apenas os dados essenciais para uma consulta rápida: **Nome, Símbolo, Preço (em BRL) e Variações Percentuais.**
 
-O projeto foi realizado usando `React v19.2.0` e `Tailwind CSS v4.2.1` como frameworks principais, ambos instalados por meio do `Vite v7.3.1`. Além de ter sido utilizado `Figma MCP` para agilizar e criar da forma mais fiel possível o **Card Component** prototipado no Figma.
+O projeto foi realizado usando `React v19.2.0` e `Tailwind CSS v4.2.1` como frameworks principais, ambos instalados por meio do `Vite v7.3.1`. Além de ter sido utilizado `Figma MCP` para acelerar o fluxo de desenvolvimento (Design-to-Code), garantindo que o componente de Card seguisse rigorosamente as especificações visuais do protótipo.
 
 Para a requisição das informações de cada criptomoeda foi utilizada a **:hot_pepper:CoinPaprika API** - voltada para disponibilizar em tempo real **preços, volume, market cap** e muito mais de milhares de criptomoedas.
 
 ## :card_index_dividers: Estrutura do Projeto
 - `src/components`: Componentes reutilizáveis (Card, Header, etc).
 - `src/services`: Lógica de consumo de APIs.
-- `src/services/api.js`: Código para consumo da CoinPaprika API.
-- `src/services/mock.js`: Código para consumo de um mock provisório caso a API não funcione.
+- `src/services/api.js`: Consumo da CoinPaprika API.
+- `src/services/mock.js`: Consumo de um mock provisório caso a API não funcione.
 - `src/assets`: Imagens e estilos globais.
 - `.gitignore`: Arquivos e pastas a não serem enviados/rastreados ao repositário remoto, evitando de vazar arquivos sensíveis (`.vscode`) ou de carregar dependências pesadas (`node_modules`).
+- `SKILL.md`: Arquivo para descrever exatamente o que a IA deve ou não fazer na geração de componentes `react`.
 
 
 ## :gear: Aplicação da API
