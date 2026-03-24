@@ -15,20 +15,35 @@ import xrp from './assets/svg/xrp.svg';
 import tron from './assets/svg/tron.svg';
 import link from './assets/svg/link.svg';
 
+const configAdicional = [
+  { id: 'btc', icon: btc, color: "#FF7700", desc: "Icone do Bitcoin" },
+  { id: 'eth', icon: eth, color: "#6D82E4", desc: "Icone do Ethereum" },
+  { id: 'sol', icon: sol, color: "#B64CEB", desc: "Icone da Solana" },
+  { id: 'bnb', icon: bnb, color: "#F1B90A", desc: "Icone do BNB" },
+  { id: 'paxg', icon: paxg, color: "#EDE70A", desc: "Icone do PAX Gold" },
+  { id: 'hype', icon: hype, color: "#50D2C1", desc: "Icone da Hype" },
+  { id: 'sui', icon: sui, color: "#4DA2FF", desc: "Icone da SUI" },
+  { id: 'zcash', icon: zcash, color: "#F3B724", desc: "Icone do Zcash" },
+  { id: 'xmr', icon: xmr, color: "#FA6800", desc: "Icone do XMR" },
+  { id: 'xrp', icon: xrp, color: "#FFFFFF", desc: "Icone do XRP" },
+  { id: 'tron', icon: tron, color: "#F70112", desc: "Icone do Tron" },
+  { id: 'link', icon: link, color: "#0746F7", desc: "Icone do Chainlink" },
+];
+
 function App() {
   const [coins, setCoins] = useState(null);
 
   useEffect(() => {
-    /*const getData = async () => {
+    const getData = async () => {
       const resultado = await fetchCripto();
       setCoins(resultado);
     };
     getData();
 
     const intervalo = setInterval(getData, 300000);
-    return () => clearInterval(intervalo);*/
+    return () => clearInterval(intervalo);
 
-    setCoins(mockData);
+    /*setCoins(mockData);*/
   }, []);
 
   if (!coins) return <p className="font-['Geist_Mono'] font-light text-lg text-center text-black flex justify-center items-center">Carregando cotações...</p>;
@@ -55,30 +70,28 @@ function App() {
             </div>
           </div>
           <div className='flex flex-col items-center mt-2 mb-2 md:mt-4 md:grid md:grid-cols-2 md:mx-4 md:gap-y-3  lg:grid-cols-3 xl:grid-cols-4 2xl:gap-y-10 2xl:mt-10 2xl:mb-6'>
-            {/*BTC*/}
-            <Card title={coins.btc.symbol} titlecomplete={coins.btc.title} iconsvg={btc} color={"#FF7700"} price={coins.btc.price} descricaoIMG={"Icone do Bitcoin"} percentage1={coins.btc.percentage1} percentage6={coins.btc.percentage6} percentage12={coins.btc.percentage12} percentage24={coins.btc.percentage24} />
-            {/*ETH*/}
-            <Card title={coins.eth.symbol} titlecomplete={coins.eth.title} iconsvg={eth} color={"#6D82E4"} price={coins.eth.price} descricaoIMG={"Icone do Ethereum"} percentage1={coins.eth.percentage1} percentage6={coins.eth.percentage6} percentage12={coins.eth.percentage12} percentage24={coins.eth.percentage24} />
-            {/*SOL*/}
-            <Card title={coins.sol.symbol} titlecomplete={coins.sol.title} iconsvg={sol} color={"#B64CEB"} price={coins.sol.price} descricaoIMG={"Icone da Solana"} percentage1={coins.sol.percentage1} percentage6={coins.sol.percentage6} percentage12={coins.sol.percentage12} percentage24={coins.sol.percentage24} />
-            {/*BNB*/}
-            <Card title={coins.bnb.symbol} titlecomplete={coins.bnb.title} iconsvg={bnb} color={"#F1B90A"} price={coins.bnb.price} descricaoIMG={"Icone do BNB"} percentage1={coins.bnb.percentage1} percentage6={coins.bnb.percentage6} percentage12={coins.bnb.percentage12} percentage24={coins.bnb.percentage24} />
-            {/*PAXG*/}
-            <Card title={coins.paxg.symbol} titlecomplete={coins.paxg.title} iconsvg={paxg} color={"#EDE70A"} price={coins.paxg.price} descricaoIMG={"Icone do PAX Gold"} percentage1={coins.paxg.percentage1} percentage6={coins.paxg.percentage6} percentage12={coins.paxg.percentage12} percentage24={coins.paxg.percentage24} />
-            {/*HYPE*/}
-            <Card title={coins.hype.symbol} titlecomplete={coins.hype.title} iconsvg={hype} color={"#50D2C1"} price={coins.hype.price} descricaoIMG={"Icone da Hype"} percentage1={coins.hype.percentage1} percentage6={coins.hype.percentage6} percentage12={coins.hype.percentage12} percentage24={coins.hype.percentage24} />
-            {/*SUI*/}
-            <Card title={coins.sui.symbol} titlecomplete={coins.sui.title} iconsvg={sui} color={"#4DA2FF"} price={coins.sui.price} descricaoIMG={"Icone da SUI"} percentage1={coins.sui.percentage1} percentage6={coins.sui.percentage6} percentage12={coins.sui.percentage12} percentage24={coins.sui.percentage24} />
-            {/*ZCASH*/}
-            <Card title={coins.zcash.symbol} titlecomplete={coins.zcash.title} iconsvg={zcash} color={"#F3B724"} price={coins.zcash.price} descricaoIMG={"Icone do Zcash"} percentage1={coins.zcash.percentage1} percentage6={coins.zcash.percentage6} percentage12={coins.zcash.percentage12} percentage24={coins.zcash.percentage24} />
-            {/*XMR*/}
-            <Card title={coins.xmr.symbol} titlecomplete={coins.xmr.title} iconsvg={xmr} color={"#FA6800"} price={coins.xmr.price} descricaoIMG={"Icone do XMR"} percentage1={coins.xmr.percentage1} percentage6={coins.xmr.percentage6} percentage12={coins.xmr.percentage12} percentage24={coins.xmr.percentage24} />
-            {/*XRP*/}
-            <Card title={coins.xrp.symbol} titlecomplete={coins.xrp.title} iconsvg={xrp} color={"#FFFFFF"} price={coins.xrp.price} descricaoIMG={"Icone do XRP"} percentage1={coins.xrp.percentage1} percentage6={coins.xrp.percentage6} percentage12={coins.xrp.percentage12} percentage24={coins.xrp.percentage24} />
-            {/*TRON*/}
-            <Card title={coins.tron.symbol} titlecomplete={coins.tron.title} iconsvg={tron} color={"#F70112"} price={coins.tron.price} descricaoIMG={"Icone do Tron"} percentage1={coins.tron.percentage1} percentage6={coins.tron.percentage6} percentage12={coins.tron.percentage12} percentage24={coins.tron.percentage24} />
-            {/*LINK*/}
-            <Card title={coins.link.symbol} titlecomplete={coins.link.title} iconsvg={link} color={"#0746F7"} price={coins.link.price} descricaoIMG={"Icone do Chainlink"} percentage1={coins.link.percentage1} percentage6={coins.link.percentage6} percentage12={coins.link.percentage12} percentage24={coins.link.percentage24} />
+
+            {configAdicional.map((coin) => {
+              const data = coins[coin.id];
+              if (!data) return null; // Proteção caso a API falhe para esta moeda específica
+
+              return (
+                <Card
+                  key={coin.id}
+                  title={data.symbol}
+                  titlecomplete={data.title}
+                  iconsvg={coin.icon}
+                  color={coin.color}
+                  price={data.price}
+                  descricaoIMG={coin.desc}
+                  percentage1={data.percentage1}
+                  percentage6={data.percentage6}
+                  percentage12={data.percentage12}
+                  percentage24={data.percentage24}
+                />
+              );
+            })}
+
           </div>
         </section>
       </div>
