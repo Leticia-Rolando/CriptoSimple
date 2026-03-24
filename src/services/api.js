@@ -48,6 +48,9 @@ export const fetchCripto = async () => {
             });
             
             document.title = `CriptoSimple | BTC: ${btcPrice} `;
+            
+        } else {
+            document.title = `CriptoSimple`;
         }
 
         return finalData;
