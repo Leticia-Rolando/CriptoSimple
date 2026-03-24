@@ -281,7 +281,7 @@ A ideia foi implementada no código dessa forma:
         </div>
 </div>
 ```
-Na `<div>` onde engloba o `<span>` colequei um **operador ternário** para fazer essa distinção: se for maior que 0, borda e background verde, caso contrário, vermelho. Mesma coisa no `<span>`, mas apenas mudando a cor da fonte.
+Na `<div>` onde engloba o `<span>` colequei um **operador ternário** para fazer essa distinção: se a porcentagem for maior que 0, borda e background verde, caso contrário, vermelho. Mesma coisa no `<span>`, mas apenas mudando a cor da fonte.
 
 
 ## :hammer: Tecnologias Utilizadas
