@@ -34,16 +34,16 @@ function App() {
   const [coins, setCoins] = useState(null);
 
   useEffect(() => {
-    const getData = async () => {
+    /*const getData = async () => {
       const resultado = await fetchCripto();
       setCoins(resultado);
     };
     getData();
 
     const intervalo = setInterval(getData, 300000);
-    return () => clearInterval(intervalo);
+    return () => clearInterval(intervalo);*/
 
-    /*setCoins(mockData);*/
+    setCoins(mockData);
   }, []);
 
   if (!coins) return <p className="font-['Geist_Mono'] font-light text-lg text-center text-black flex justify-center items-center">Carregando cotações...</p>;
@@ -53,7 +53,7 @@ function App() {
     <>
       <div className='fundo min-h-screen overflow-hidden'>
         <header className='flex flex-col items-center justify-center text-zinc-100 px-2'>
-          <h1 className="pt-50 font-['Manufacturing_Consent'] text-[65px] 2xl:text-[85px]">CriptoSimple</h1>
+          <h1 className="pt-50 font-['Manufacturing_Consent'] text-[65px] md:text-[70px] 2xl:text-[85px]">CriptoSimple</h1>
           <p className="pt-8 pb-7 font-['Geist_Mono'] font-light text-lg text-center 2xl:text-xl">Para você acompanhar o mercado cripto de forma simples</p>
           <figure className='w-8 h-8 2xl:w-9 2xl:h-9'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none" /><line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" /><polyline points="56 144 128 216 200 144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" /></svg>
@@ -69,11 +69,11 @@ function App() {
               </span>
             </div>
           </div>
-          <div className='flex flex-col items-center mt-2 mb-2 md:mt-4 md:grid md:grid-cols-2 md:mx-4 md:gap-y-3  lg:grid-cols-3 xl:grid-cols-4 2xl:gap-y-10 2xl:mt-10 2xl:mb-6'>
+          <div className='flex flex-col items-center mt-2 mb-4 md:mt-4 md:grid md:grid-cols-2 md:mx-4 md:gap-y-3  lg:grid-cols-3 xl:grid-cols-4 2xl:gap-y-10 2xl:mt-10 2xl:mb-6'>
 
             {configAdicional.map((coin) => {
               const data = coins[coin.id];
-              if (!data) return null; // Proteção caso a API falhe para esta moeda específica
+              if (!data) return null;
 
               return (
                 <Card
