@@ -34,12 +34,25 @@ export const fetchCripto = async () => {
                     percentage12: data.quotes.BRL.percent_change_12h,
                     percentage24: data.quotes.BRL.percent_change_24h
                 };
+
+                
             } else {
                 console.warn("Falha ao carregar uma moeda:", result.reason);
             }
         });
 
+        if (finalData.btc) {
+            const btcPrice = finalData.btc.price.toLocaleString('pt-BR', { 
+                style: 'currency', 
+                currency: 'BRL' 
+            });
+            
+            document.title = `CriptoSimple | BTC: ${btcPrice} `;
+        }
+
         return finalData;
+
+        
 
     } catch (error) {
         console.error("Erro crítico na função fetchCripto: ", error);

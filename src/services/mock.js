@@ -14,3 +14,4 @@ export const mockData = {
     link: { title: "Chainlink", symbol: "LINK", price: 800.00, percentage1: 1.5, percentage6: 5.2, percentage12: 10.5, percentage24: 12.1 }
     
 };
+
