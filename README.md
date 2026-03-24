@@ -326,7 +326,7 @@ Para que meu Figma fosse acessado pelo `MCP Server`, foi necessário colocar meu
 
 ## :link: Acessar o Projeto
 
-Acesse aqui a :point_right: [página](https://petceline.netlify.app/) :point_left: 
+Acesse aqui a :point_right: [página](https://criptosimple.netlify.app/) :point_left: 
 
 
 
