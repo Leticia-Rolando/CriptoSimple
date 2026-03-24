@@ -265,7 +265,15 @@ export const fetchCripto = async () => {
 
 ## :computer: Demonstração e Protótipo
 
+### Protótipo Card
+
 <img alt="Mockup" src="./src/assets/images/card prototipo.jpg">
+
+O Card foi projetado para possuir uma barra lateral onde mostrasse as variações de porcentagem, caso a porcentagem presente fosse maior que zero, ela apareceria em verde, caso contrário, em vermelho.
+A ideia foi implementada no código dessa forma:
+
+```javascript
+```
 
 ## :hammer: Tecnologias Utilizadas
 
