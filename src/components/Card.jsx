@@ -24,17 +24,17 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                                 <div className=" text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">1h</div>
                                 <div className=" w-23 h-0 border-t border-[#6B74A3]"></div>
                                 <div className={`flex items-center justify-center w-23 h-6.75 mt-1.5 border rounded-[8px] ${percentage1 > 0 ? 'bg-[rgba(6,217,98,0.2)]  border-[#06D962]' : 'bg-[rgba(241,86,83,0.2)]  border-[#F15653]'}`}>
-                                    <div className={ `w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage1 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}` }>{percentage1}%</div>
+                                    <div className={`w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage1 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}`}>{percentage1}%</div>
                                 </div>
                             </div>
 
                             {/* 6h */}
-                            
+
                             <div className="flex flex-col justify-center items-center">
                                 <div className=" text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">6h</div>
                                 <div className=" w-23 h-0 border-t border-[#6B74A3]"></div>
                                 <div className={`flex items-center justify-center w-23 h-6.75 mt-1.5 border rounded-[8px] ${percentage6 > 0 ? 'bg-[rgba(6,217,98,0.2)]  border-[#06D962]' : 'bg-[rgba(241,86,83,0.2)]  border-[#F15653]'}`}>
-                                    <div className={ `w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage6 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}` }>{percentage6}%</div>
+                                    <div className={`w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage6 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}`}>{percentage6}%</div>
                                 </div>
                             </div>
 
@@ -43,7 +43,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                                 <div className=" text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">12h</div>
                                 <div className=" w-23 h-0 border-t border-[#6B74A3]"></div>
                                 <div className={`flex items-center justify-center w-23 h-6.75 mt-1.5 border rounded-[8px] ${percentage12 > 0 ? 'bg-[rgba(6,217,98,0.2)]  border-[#06D962]' : 'bg-[rgba(241,86,83,0.2)]  border-[#F15653]'}`}>
-                                    <div className={ `w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage12 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}` }>{percentage12}%</div>
+                                    <div className={`w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage12 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}`}>{percentage12}%</div>
                                 </div>
                             </div>
 
@@ -52,7 +52,7 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
                                 <div className=" text-[#FFFFFF] font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center">24h</div>
                                 <div className=" w-23 h-0 border-t border-[#6B74A3]"></div>
                                 <div className={`flex items-center justify-center w-23 h-6.75 mt-1.5 border rounded-[8px] ${percentage24 > 0 ? 'bg-[rgba(6,217,98,0.2)]  border-[#06D962]' : 'bg-[rgba(241,86,83,0.2)]  border-[#F15653]'}`}>
-                                    <div className={ `w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage24 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}` }>{percentage24}%</div>
+                                    <div className={`w-14.5 h-5.25 font-['Geist_Mono'] font-medium text-[16px] leading-[1.3] text-center ${percentage24 > 0 ? 'text-[#06D962]' : 'text-[#F15653]'}`}>{percentage24}%</div>
                                 </div>
                             </div>
 
