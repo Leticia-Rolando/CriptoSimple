@@ -30,7 +30,7 @@ Para a requisição das informações de cada criptomoeda foi utilizada a **:hot
 
 
 ## :gear: Aplicação da API
-A requisição da API foi feita usando `fetch()` com o método `GET`, buscando apenas **nome, símbolo, preço e mudança de porcentagem em 1h/6h/12h/24h**; onde cada criptomoeda possui um `id`.
+A requisição da API foi feita usando `fetch()` com o método `GET`, buscando apenas **nome, símbolo, preço e variação da porcentagem em 1h/6h/12h/24h**; onde cada criptomoeda possui um `id`.
 
 <div align="center">
 
@@ -108,158 +108,73 @@ A estruta padrão `JSON` é descrita assim na [documentação](https://docs.coin
 }
 ```
 
-Devido ao uso gratuito da API, na [documentação](https://docs.coinpaprika.com/api-reference/rest-api/introduction) é dito que só pode ser realizada **uma** requisição a cada **5 minutos** e no **máximo 20.000** requisições totais por mês; além de que não é possível no plano free usar apenas um link para chamar todos os `ids` de uma só vez, sendo necessário um `fetch` para cada moeda.
+Devido ao uso gratuito da API, na [documentação](https://docs.coinpaprika.com/api-reference/rest-api/introduction) é dito que só pode ser realizada **uma** requisição a cada **5 minutos** e no **máximo 20.000** requisições totais por mês. 
 
 ```javascript
 export const fetchCripto = async () => {
+    const coinIds = [
+        'eth-ethereum', 'btc-bitcoin', 'paxg-pax-gold', 'sol-solana',
+        'bnb-binance-coin', 'hype-hyperliquid', 'sui-sui', 'zec-zcash',
+        'xmr-monero', 'xrp-xrp', 'trx-tron', 'link-chainlink'
+    ];
 
     try {
-        const ETHpromise = fetch('https://api.coinpaprika.com/v1/tickers/eth-ethereum?quotes=BRL');
-        const BTCpromise = fetch('https://api.coinpaprika.com/v1/tickers/btc-bitcoin?quotes=BRL');
-        const PAXGpromise = fetch('https://api.coinpaprika.com/v1/tickers/paxg-pax-gold?quotes=BRL');
-        const SOLpromise = fetch('https://api.coinpaprika.com/v1/tickers/sol-solana?quotes=BRL');
-        const BNBpromise = fetch('https://api.coinpaprika.com/v1/tickers/bnb-binance-coin?quotes=BRL');
-        const HYPEpromise = fetch('https://api.coinpaprika.com/v1/tickers/hype-hyperliquid?quotes=BRL');
-        const SUIpromise = fetch('https://api.coinpaprika.com/v1/tickers/sui-sui?quotes=BRL');
-        const ZCASHpromise = fetch('https://api.coinpaprika.com/v1/tickers/zec-zcash?quotes=BRL');
-        const XMRpromise = fetch('https://api.coinpaprika.com/v1/tickers/xmr-monero?quotes=BRL');
-        const XRPpromise = fetch('https://api.coinpaprika.com/v1/tickers/xrp-xrp?quotes=BRL');
-        const TRONpromise = fetch('https://api.coinpaprika.com/v1/tickers/trx-tron?quotes=BRL');
-        const LINKpromise = fetch('https://api.coinpaprika.com/v1/tickers/link-chainlink?quotes=BRL');
+        const promises = coinIds.map(id =>
+            fetch(`https://api.coinpaprika.com/v1/tickers/${id}?quotes=BRL`).then(res => {
+                if (!res.ok) throw new Error(`Erro na moeda ${id}`);
+                return res.json();
+            })
+        );
 
-        const [ETHresponse, BTCresponse, PAXGresponse, SOLresponse, BNBresponse, HYPEresponse, SUIresponse, ZCASHresponse, XMRresponse, XRPresponse, TRONresponse, LINKresponse] 
-        = await Promise.all([ETHpromise, BTCpromise, PAXGpromise, SOLpromise, BNBpromise, HYPEpromise, SUIpromise, ZCASHpromise, XMRpromise, XRPpromise, TRONpromise, LINKpromise]);
+        const results = await Promise.allSettled(promises);
 
-        const ETHdata = await ETHresponse.json();
-        const BTCdata = await BTCresponse.json();
-        const PAXGdata = await PAXGresponse.json();
-        const SOLdata = await SOLresponse.json();
-        const BNBdata = await BNBresponse.json();
-        const HYPEdata = await HYPEresponse.json();
-        const SUIdata = await SUIresponse.json();
-        const ZCASHdata = await ZCASHresponse.json();
-        const XMRdata = await XMRresponse.json();
-        const XRPdata = await XRPresponse.json();
-        const TRONdata = await TRONresponse.json();
-        const LINKdata = await LINKresponse.json();
+        const finalData = {};
 
-        return {
-            eth: {
-                title: ETHdata.name,
-                symbol: ETHdata.symbol,
-                price: ETHdata.quotes.BRL.price,
-                percentage1: ETHdata.quotes.BRL.percent_change_1h,
-                percentage6: ETHdata.quotes.BRL.percent_change_6h,
-                percentage12: ETHdata.quotes.BRL.percent_change_12h,
-                percentage24: ETHdata.quotes.BRL.percent_change_24h
-            },
-            btc: {
-                title: BTCdata.name,
-                symbol: BTCdata.symbol,
-                price: BTCdata.quotes.BRL.price,
-                percentage1: BTCdata.quotes.BRL.percent_change_1h,
-                percentage6: BTCdata.quotes.BRL.percent_change_6h,
-                percentage12: BTCdata.quotes.BRL.percent_change_12h,
-                percentage24: BTCdata.quotes.BRL.percent_change_24h
-            },
-            paxg: {
-                title: PAXGdata.name,
-                symbol: PAXGdata.symbol,
-                price: PAXGdata.quotes.BRL.price,
-                percentage1: PAXGdata.quotes.BRL.percent_change_1h,
-                percentage6: PAXGdata.quotes.BRL.percent_change_6h,
-                percentage12: PAXGdata.quotes.BRL.percent_change_12h,
-                percentage24: PAXGdata.quotes.BRL.percent_change_24h
-            },
-            sol: {
-                title: SOLdata.name,
-                symbol: SOLdata.symbol,
-                price: SOLdata.quotes.BRL.price,
-                percentage1: SOLdata.quotes.BRL.percent_change_1h,
-                percentage6: SOLdata.quotes.BRL.percent_change_6h,
-                percentage12: SOLdata.quotes.BRL.percent_change_12h,
-                percentage24: SOLdata.quotes.BRL.percent_change_24h
-            },
-            bnb: {
-                title: BNBdata.name,
-                symbol: BNBdata.symbol,
-                price: BNBdata.quotes.BRL.price,
-                percentage1: BNBdata.quotes.BRL.percent_change_1h,
-                percentage6: BNBdata.quotes.BRL.percent_change_6h,
-                percentage12: BNBdata.quotes.BRL.percent_change_12h,
-                percentage24: BNBdata.quotes.BRL.percent_change_24h
-            },
-            hype: {
-                title: HYPEdata.name,
-                symbol: HYPEdata.symbol,
-                price: HYPEdata.quotes.BRL.price,
-                percentage1: HYPEdata.quotes.BRL.percent_change_1h,
-                percentage6: HYPEdata.quotes.BRL.percent_change_6h,
-                percentage12: HYPEdata.quotes.BRL.percent_change_12h,
-                percentage24: HYPEdata.quotes.BRL.percent_change_24h
-            },
-            sui: {
-                title: SUIdata.name,
-                symbol: SUIdata.symbol,
-                price: SUIdata.quotes.BRL.price,
-                percentage1: SUIdata.quotes.BRL.percent_change_1h,
-                percentage6: SUIdata.quotes.BRL.percent_change_6h,
-                percentage12: SUIdata.quotes.BRL.percent_change_12h,
-                percentage24: SUIdata.quotes.BRL.percent_change_24h
-            },
-            zcash: {
-                title: ZCASHdata.name,
-                symbol: ZCASHdata.symbol,
-                price: ZCASHdata.quotes.BRL.price,
-                percentage1: ZCASHdata.quotes.BRL.percent_change_1h,
-                percentage6: ZCASHdata.quotes.BRL.percent_change_6h,
-                percentage12: ZCASHdata.quotes.BRL.percent_change_12h,
-                percentage24: ZCASHdata.quotes.BRL.percent_change_24h
-            },
-            xmr: {
-                title: XMRdata.name,
-                symbol: XMRdata.symbol,
-                price: XMRdata.quotes.BRL.price,
-                percentage1: XMRdata.quotes.BRL.percent_change_1h,
-                percentage6: XMRdata.quotes.BRL.percent_change_6h,
-                percentage12: XMRdata.quotes.BRL.percent_change_12h,
-                percentage24: XMRdata.quotes.BRL.percent_change_24h
-            },
-            xrp: {
-                title: XRPdata.name,
-                symbol: XRPdata.symbol,
-                price: XRPdata.quotes.BRL.price,
-                percentage1: XRPdata.quotes.BRL.percent_change_1h,
-                percentage6: XRPdata.quotes.BRL.percent_change_6h,
-                percentage12: XRPdata.quotes.BRL.percent_change_12h,
-                percentage24: XRPdata.quotes.BRL.percent_change_24h
-            },
-            tron: {
-                title: TRONdata.name,
-                symbol: TRONdata.symbol,
-                price: TRONdata.quotes.BRL.price,
-                percentage1: TRONdata.quotes.BRL.percent_change_1h,
-                percentage6: TRONdata.quotes.BRL.percent_change_6h,
-                percentage12: TRONdata.quotes.BRL.percent_change_12h,
-                percentage24: TRONdata.quotes.BRL.percent_change_24h
-            },
-            link: {
-                title: LINKdata.name,
-                symbol: LINKdata.symbol,
-                price: LINKdata.quotes.BRL.price,
-                percentage1: LINKdata.quotes.BRL.percent_change_1h,
-                percentage6: LINKdata.quotes.BRL.percent_change_6h,
-                percentage12: LINKdata.quotes.BRL.percent_change_12h,
-                percentage24: LINKdata.quotes.BRL.percent_change_24h
+        results.forEach((result) => {
+            if (result.status === 'fulfilled') {
+                const data = result.value;
+                let key = data.symbol.toLowerCase();
+
+                if (key === 'trx') key = 'tron';
+                if (key === 'zec') key = 'zcash';
+
+                finalData[key] = {
+                    title: data.name,
+                    symbol: data.symbol,
+                    price: data.quotes.BRL.price,
+                    percentage1: data.quotes.BRL.percent_change_1h,
+                    percentage6: data.quotes.BRL.percent_change_6h,
+                    percentage12: data.quotes.BRL.percent_change_12h,
+                    percentage24: data.quotes.BRL.percent_change_24h
+                };
+
+
+            } else {
+                console.warn("Falha ao carregar uma moeda:", result.reason);
             }
-        };
+        });
+
+        if (finalData.btc) {
+            const btcPrice = finalData.btc.price.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            });
+
+            document.title = `CriptoSimple | BTC: ${btcPrice} `;
+
+        } else {
+            document.title = `CriptoSimple`;
+        }
+
+        return finalData;
+
 
 
     } catch (error) {
-        console.log("Erro na requisição da API: ", error);
+        console.error("Erro crítico na função fetchCripto: ", error);
         return null;
     }
-}
+};
 ```
 
 
