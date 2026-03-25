@@ -182,7 +182,7 @@ export const fetchCripto = async () => {
 
 ### Protótipo Card
 
-<img alt="Mockup" src="./src/assets/images/card prototipo.jpg">
+<img alt="Protótipo do Card" src="./src/assets/images/card_prototipo.jpg">
 
 O Card foi projetado para possuir uma barra lateral onde mostrasse as variações de porcentagem, caso a porcentagem presente fosse maior que zero, ela apareceria em verde, caso contrário, em vermelho.
 A ideia foi implementada no código dessa forma:
@@ -199,6 +199,8 @@ A ideia foi implementada no código dessa forma:
 Na `<div>` onde engloba o `<span>` colequei um **operador ternário** para fazer essa distinção: se a porcentagem for maior que 0, borda e background verde, caso contrário, vermelho. Mesma coisa no `<span>`, mas apenas mudando a cor da fonte.
 
 ### Demonstração - Tipos de Tela
+
+<img alt="Mockup" src="./src/assets/images/mockup.jpg">
 
 ## :hammer: Tecnologias Utilizadas
 
