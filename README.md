@@ -198,6 +198,7 @@ A ideia foi implementada no código dessa forma:
 ```
 Na `<div>` onde engloba o `<span>` colequei um **operador ternário** para fazer essa distinção: se a porcentagem for maior que 0, borda e background verde, caso contrário, vermelho. Mesma coisa no `<span>`, mas apenas mudando a cor da fonte.
 
+### Demonstração - Tipos de Tela
 
 ## :hammer: Tecnologias Utilizadas
 
