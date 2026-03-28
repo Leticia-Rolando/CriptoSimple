@@ -30,11 +30,30 @@ Para a requisição das informações de cada criptomoeda foi utilizada a **:hot
 
 
 ## :gear: Aplicação da API
-A requisição da API foi feita usando `fetch()` com o método `GET`, buscando apenas **nome, símbolo, preço e variação da porcentagem em 1h/6h/12h/24h**; onde cada criptomoeda possui um `id`.
+
+A integração com a [:hot_pepper:Coinpaprika API](https://docs.coinpaprika.com/) foi desenvolvida com foco em performance e resiliência, utilizando o método `GET` para monitorizar dados em tempo real.
+
+### :hammer_and_wrench: Estratégia de Implementação
+
+Como a aplicação precisa de dados de múltiplas criptomoedas simultaneamente, a implementação segue estes pilares:
+
+1. **Processamento Paralelo com `Promise.allSettled`**: 
+   Em vez de carregar uma moeda de cada vez, o código dispara todas as requisições simultaneamente. Utilizamos o `allSettled` para garantir que, mesmo que a requisição de uma moeda falhe (erro 404 ou limite atingido), as outras continuem a ser processadas.
+
+2. **Normalização de Dados**:
+   Os dados brutos são filtrados e mapeados para um objeto `finalData`. Realizamos ajustes de chaves (ex: converter `TRX` para `tron`) para manter a consistência com a estrutura interna do projeto.
+
+3. **Localização e UX (User Experience)**:
+   * **Moeda**: As requisições utilizam o parâmetro `?quotes=BRL` para obter preços em Reais.
+   * **Feedback Dinâmico**: O preço do Bitcoin (BTC) é formatado via `toLocaleString` e injetado no título da aba (`document.title`), permitindo o acompanhamento sem mudar de janela.
+
+### :bar_chart: Moedas Monitorizadas
+
+Abaixo estão os IDs utilizados para as requisições:
 
 <div align="center">
 
-| Id Correspondente
+| Id Correspondente |
 | :--- | 
 | btc-bitcoin |
 | eth-ethereum |
@@ -51,130 +70,29 @@ A requisição da API foi feita usando `fetch()` com o método `GET`, buscando a
 
 </div>
 
-A estruta padrão `JSON` é descrita assim na [documentação](https://docs.coinpaprika.com/api-reference/rest-api/introduction) (em caso de status HTTP 200) usando como exemplo o `id` do bitcoin: 
+### :warning: Limitações de Uso (Free Tier)
+De acordo com a documentação oficial, a aplicação respeita os seguintes limites:
+* **Frequência**: 1 requisição a cada 5 minutos por endpoint.
+* **Volume**: Máximo de 20.000 requisições mensais.
+
+### :memo: Estrutura de Resposta (JSON)
+Extraímos apenas os campos essenciais: `name`, `symbol`, `price` e as variações de 1h, 6h, 12h e 24h. Exemplo de retorno esperado:
 
 ```json
 {
   "id": "btc-bitcoin",
   "name": "Bitcoin",
   "symbol": "BTC",
-  "rank": 1,
-  "circulating_supply": 17007062,
-  "total_supply": 17007062,
-  "max_supply": 21000000,
-  "beta_value": 0.735327,
-  "first_data_at": "2010-11-14T07:20:41Z",
-  "last_updated": "2018-11-14T07:20:41Z",
   "quotes": {
-    "BTC": {
-      "price": 1,
-      "volume_24h": 1414951.9739396,
-      "volume_24h_change_24h": -4.03,
-      "market_cap": 17646575,
-      "market_cap_change_24h": 0.01,
-      "percent_change_15m": 0,
-      "percent_change_30m": 0,
-      "percent_change_1h": 0,
-      "percent_change_6h": 0,
-      "percent_change_12h": 0,
-      "percent_change_24h": 0,
-      "percent_change_7d": 0,
-      "percent_change_30d": 0,
-      "percent_change_1y": 0,
-      "ath_price": null,
-      "ath_date": null,
-      "percent_from_price_ath": null
-    },
-    "USD": {
-      "price": 5162.15941296,
-      "volume_24h": 7304207651.1585,
-      "volume_24h_change_24h": -2.5,
-      "market_cap": 91094433242,
-      "market_cap_change_24h": 1.6,
-      "percent_change_15m": 0,
-      "percent_change_30m": 0,
+    "BRL": {
+      "price": 5162.15,
       "percent_change_1h": 0,
       "percent_change_6h": 0,
       "percent_change_12h": -0.09,
-      "percent_change_24h": 1.59,
-      "percent_change_7d": 0.28,
-      "percent_change_30d": 27.39,
-      "percent_change_1y": -37.99,
-      "ath_price": 20089,
-      "ath_date": "2017-12-17T12:19:00Z",
-      "percent_from_price_ath": -74.3
+      "percent_change_24h": 1.59
     }
   }
 }
-```
-
-Devido ao uso gratuito da API, na [documentação](https://docs.coinpaprika.com/api-reference/rest-api/introduction) é dito que só pode ser realizada **uma** requisição a cada **5 minutos** e no **máximo 20.000** requisições totais por mês. 
-
-```javascript
-export const fetchCripto = async () => {
-    const coinIds = [
-        'eth-ethereum', 'btc-bitcoin', 'paxg-pax-gold', 'sol-solana',
-        'bnb-binance-coin', 'hype-hyperliquid', 'sui-sui', 'zec-zcash',
-        'xmr-monero', 'xrp-xrp', 'trx-tron', 'link-chainlink'
-    ];
-
-    try {
-        const promises = coinIds.map(id =>
-            fetch(`https://api.coinpaprika.com/v1/tickers/${id}?quotes=BRL`).then(res => {
-                if (!res.ok) throw new Error(`Erro na moeda ${id}`);
-                return res.json();
-            })
-        );
-
-        const results = await Promise.allSettled(promises);
-
-        const finalData = {};
-
-        results.forEach((result) => {
-            if (result.status === 'fulfilled') {
-                const data = result.value;
-                let key = data.symbol.toLowerCase();
-
-                if (key === 'trx') key = 'tron';
-                if (key === 'zec') key = 'zcash';
-
-                finalData[key] = {
-                    title: data.name,
-                    symbol: data.symbol,
-                    price: data.quotes.BRL.price,
-                    percentage1: data.quotes.BRL.percent_change_1h,
-                    percentage6: data.quotes.BRL.percent_change_6h,
-                    percentage12: data.quotes.BRL.percent_change_12h,
-                    percentage24: data.quotes.BRL.percent_change_24h
-                };
-
-
-            } else {
-                console.warn("Falha ao carregar uma moeda:", result.reason);
-            }
-        });
-
-        if (finalData.btc) {
-            const btcPrice = finalData.btc.price.toLocaleString('pt-BR', {
-                style: 'currency',
-                currency: 'BRL'
-            });
-
-            document.title = `CriptoSimple | BTC: ${btcPrice} `;
-
-        } else {
-            document.title = `CriptoSimple`;
-        }
-
-        return finalData;
-
-
-
-    } catch (error) {
-        console.error("Erro crítico na função fetchCripto: ", error);
-        return null;
-    }
-};
 ```
 
 
