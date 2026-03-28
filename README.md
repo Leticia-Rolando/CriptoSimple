@@ -224,6 +224,7 @@ Na `<div>` onde engloba o `<span>` colequei um **operador ternário** para fazer
   <img src="https://skillicons.dev/icons?i=figma" height="40" alt="figma logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=vite" height="40" alt="vite logo"  />
+  <img src="https://github.gallerycdn.vsassets.io/extensions/github/copilotvs/1.206.0.0/1719349649662/Microsoft.VisualStudio.Services.Icons.Default" height="40" alt="github copilot logo"  />
 </div>
 
 ### Figma MCP
