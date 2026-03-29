@@ -70,7 +70,7 @@ function App() {
               </span>
             </div>
           </div>
-          <div className='flex flex-col items-center mt-2 mb-4 md:mt-4 md:grid md:grid-cols-2 md:mx-4 md:gap-y-3  lg:grid-cols-3 xl:grid-cols-4 2xl:gap-y-10 2xl:mt-10 2xl:mb-6'>
+          <div className='flex flex-col items-center mt-2 mb-4 md:mt-4 md:grid md:grid-cols-2 md:mx-4 md:gap-y-3 lg:grid-cols-3 lg:min-gap-x-2 xl:grid-cols-4 2xl:gap-y-10 2xl:mt-10 2xl:mb-6'>
 
             {configAdicional.map((coin) => {
               const data = coins[coin.id];
