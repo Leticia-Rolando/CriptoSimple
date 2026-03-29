@@ -35,16 +35,16 @@ function App() {
   const [coins, setCoins] = useState(null);
 
   useEffect(() => {
-    const getData = async () => {
+    /*const getData = async () => {
       const resultado = await fetchCripto();
       setCoins(resultado);
     };
     getData();
 
     const intervalo = setInterval(getData, 300000);
-    return () => clearInterval(intervalo);
+    return () => clearInterval(intervalo);*/
 
-    /*setCoins(mockData);*/
+    setCoins(mockData);
   }, []);
 
   if (!coins) return <p className="font-['Geist_Mono'] font-light text-lg text-center text-black flex justify-center items-center">Carregando cotações...</p>;
@@ -93,6 +93,9 @@ function App() {
               );
             })}
 
+          </div>
+          <div className='pt-10 flex flex-col items-center'>
+            <span className='text-xs text-center text-zinc-200 font-[Geist_Mono] ' >&copy; 2026 </span>
           </div>
         </section>
       </div>
