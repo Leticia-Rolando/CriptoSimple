@@ -1,6 +1,8 @@
 <div align="center">
   
-<img alt="Logo CriptoSimple" src="./src/assets/logos/logoCompletoCriptoSimple.svg" height="120">
+<img alt="Logo CriptoSimple" src="./src/assets/logos/logoCompletoCriptoSimple.svg" height="120"  />
+
+<img width="12" />
 
 <img alt="Static Badge" src="https://img.shields.io/badge/mar%C3%A7o%2F2026-mar%C3%A7o_2026?style=for-the-badge&label=criado%20em&color=%23153535"> <img alt="Status do Projeto" src="https://img.shields.io/badge/Status-Finalizado-green?style=for-the-badge"> </div>
 
