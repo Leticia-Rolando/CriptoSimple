@@ -94,8 +94,8 @@ function App() {
             })}
 
           </div>
-          <div className='pt-10 flex flex-col items-center'>
-            <span className='text-xs text-center text-zinc-200 font-[Geist_Mono] ' >&copy; 2026 </span>
+          <div className='pt-5 flex flex-col items-center justify-center'>
+            <span className='text-xs text-center text-[#5C8374] font-[Geist_Mono]'>&copy; 2026 Letícia Frulani. Todos os direitos reservados.</span>
           </div>
         </section>
       </div>
