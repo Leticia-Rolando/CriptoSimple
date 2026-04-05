@@ -36,3 +36,9 @@
   pointer-events: none;
   z-index: 20; /* Garante que fique acima do Rectangle 9 */
 }
+
+.bordaFigma:hover::before{
+  background: linear-gradient(to bottom , #153535, #509d7f);
+}
+
+/*#509d7f*/

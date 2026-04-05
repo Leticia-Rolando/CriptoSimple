@@ -5,9 +5,9 @@ const Card = ({ title, titlecomplete, iconsvg, price, color, percentage1, percen
 
         <div className='flex justify-center items-center -my-10 m-0'>
 
-            <div className="scale-68 md:scale-70 lg:scale-64 2xl:scale-80 origin-center font-['Geist_Mono']">
+            <div className="scale-68 md:scale-70 lg:scale-64 lg:hover:-translate-y-1.5 2xl:scale-80 origin-center font-['Geist_Mono'] transition delay-60 duration-200 ease-in-out">
 
-                <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] bordaFigma">
+                <div className="relative w-122.5 h-77.75 bg-[#153535] rounded-[34px] shadow-[1px_4px_30px_8px_rgba(27,66,66,1)] hover:shadow-[1px_4px_30px_8px_rgba(31,77,77,1)] bordaFigma">
 
                     {/* Rectangle 9 lateral */}
                     <div className="absolute right-0 top-0 w-30.5 h-77.75 bg-[#061922] rounded-[0px_34px_34px_0px] flex items-center justify-center">
