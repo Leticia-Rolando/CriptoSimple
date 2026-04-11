@@ -35,16 +35,16 @@ function App() {
   const [coins, setCoins] = useState(null);
 
   useEffect(() => {
-    /*const getData = async () => {
+    const getData = async () => {
       const resultado = await fetchCripto();
       setCoins(resultado);
     };
-    getData();*
+    getData();
 
     const intervalo = setInterval(getData, 300000);
-    return () => clearInterval(intervalo)*/
+    return () => clearInterval(intervalo)
 
-    setCoins(mockData);
+    /*setCoins(mockData);*/
   }, []);
 
   if (!coins) return <p className="font-['Geist_Mono'] font-light text-lg text-center text-black flex justify-center items-center">Carregando cotações...</p>;
